@@ -1,0 +1,42 @@
+/* Estilo general del título principal */
+.quarto-title-block .title {
+  font-size: 2.8rem;        /* tamaño mayor del título */
+  font-weight: 700;         /* más grueso */
+  color: #1a1a1a;           /* color neutro oscuro */
+  text-align: center;       /* centrado */
+  margin-bottom: 0.4em;
+}
+
+/* Subtítulo más pequeño y con tono gris */
+.quarto-title-block .subtitle {
+  font-size: 1.4rem;
+  color: #555;
+  text-align: center;
+  margin-top: -0.3em;
+  margin-bottom: 1.2em;
+}
+
+/* Opcional: autores centrados también */
+.quarto-title-block .quarto-title-authors {
+  text-align: center;
+}
+
+/* ----- Personalización del título del índice (Table of Contents) ----- */
+
+/* Aumenta tamaño y pone en negrita la palabra "Contents" */
+.sidebar-title {
+  font-size: 1.1rem;      /* aumenta un poco el tamaño */
+  font-weight: 700;       /* negrita */
+  color: #1a1a1a;         /* color negro neutro (puedes cambiar a #003366 si quieres azul UCM) */
+  text-transform: none;   /* mantiene mayúsculas/minúsculas originales */
+  margin-bottom: 0.6em;   /* separa ligeramente del contenido */
+}
+
+/* Opcional: resaltar visualmente el encabezado del TOC */
+.sidebar {
+  border-right: 1px solid #ddd;
+}
+
+.sidebar nav {
+  padding-right: 0.5em;
+}
