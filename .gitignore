@@ -1,13 +1,47 @@
+# --------------------------
+# RStudio / R environment
+# --------------------------
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
-# Ignore high-resolution images
-images/*.tiff
-# --- Datos locales y caché ---
+
+# --------------------------
+# Cache and temporary files
+# --------------------------
+*_cache/
+_cache/
+*.knit.md
+*.utf8.md
+*.log
+*.tmp
+*.bak
+
+# --------------------------
+# Quarto / Markdown builds
+# --------------------------
+docs/*.html
+docs/*_files/
+docs/*.pdf
+docs/*.qmd
+!docs/OpenUrbanAir_and_Meteorological_Workflow.qmd  # keep key workflow document
+
+# --------------------------
+# Local data and cache folders
+# --------------------------
 data/
 rosm.cache/
-# --- Archivos Quarto locales que no deben subirse ---
-docs/jcaceres_Quarto.html
-docs/jcaceres_Quarto.qmd
-docs/jcaceres_Quarto_files/
+!data/README.md  # allow a small readme describing data sources
+
+# --------------------------
+# High-resolution figures
+# --------------------------
+figures_tiff/*.tiff
+
+# --------------------------
+# System / OS files
+# --------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
