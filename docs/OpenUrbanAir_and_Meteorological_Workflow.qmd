@@ -3,7 +3,7 @@ title: "Citizen Science and STEM Education with R"
 subtitle: "Teaching and Research Companion Notebook — Open Urban Air Data from Madrid (2020–2024)"
 author:
   - name: "Jesús Cáceres Tello"
-    affiliation: "Department of Computer Science and Engineering, Complutense University of Madrid"
+    affiliation: "Faculty of Computer Science, Complutense University of Madrid"
     email: "jescacer@ucm.es"
   - name: "José Javier Galán Hernández"
     affiliation: "Dpto. Computer Science, University of Alcalá"
@@ -16,7 +16,6 @@ format:
     toc-location: left
     number-sections: true
     page-layout: full
-    css: styles.css
 engine: knitr
 execute:
   echo: false
@@ -25,8 +24,6 @@ execute:
   working-directory: ".."
 title-block-style: default
 title-block-banner: false
-bibliography: "references.bib"
-csl: "apa.csl"
 ---
 
 # 💡 Purpose of the Notebook
@@ -43,7 +40,6 @@ It reproduces the main analytical workflow implemented in the study and illustra
 The complete workflow integrates **open data**, **computational reproducibility**, and **STEM learning**.\
 It can be applied to other urban contexts or courses focusing on environmental informatics, statistical modelling, or sustainability transitions.
 
-
 ```{r fig1-pipeline, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 1. Open Data and Methodological Pipeline.'}
 knitr::include_graphics("images/Fig1_Open_Data_and_Methodological_Pipeline.png")
 
@@ -55,17 +51,8 @@ knitr::include_graphics("images/Fig1_Open_Data_and_Methodological_Pipeline.png")
 
 ## Air Quality Data
 
-Air quality datasets were obtained from the **Madrid Open Data Portal** (*Portal de Datos Abiertos del Ayuntamiento de Madrid*).  
-These include hourly measurements for the period **2020–2024**, covering major urban pollutants:
-
-- Nitrogen dioxide (**NO₂**)  
-- Ozone (**O₃**)  
-- Particulate matter (**PM₁₀**, **PM₂.₅**)  
-- Sulphur dioxide (**SO₂**)  
-- Carbon monoxide (**CO**)
-
-Twenty-four urban monitoring stations distributed across the metropolitan area provide these observations, enabling both **spatial** and **temporal** analysis.
-
+Air quality datasets were retrieved from the **Madrid Open Data Portal** (*Portal de Datos Abiertos del Ayuntamiento de Madrid*).\
+Measurements include nitrogen dioxide (NO₂), ozone (O₃), particulate matter (PM₁₀, PM₂.₅), sulphur dioxide (SO₂), and carbon monoxide (CO) recorded hourly across 24 urban stations (2020–2024).
 
 ```{r fig2a-map, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 2a. Air quality monitoring stations across the Madrid urban area (2020–2024).'}
 knitr::include_graphics("images/Fig2a_Mapa_Madrid_Final_v7_3.png")
@@ -74,8 +61,7 @@ knitr::include_graphics("images/Fig2a_Mapa_Madrid_Final_v7_3.png")
 
 ## Pollutant Coverage
 
-Each monitoring station is characterised by its specific set of measured pollutants and sampling frequency.  
-This diversity in sensor configuration offers an ideal opportunity for students to analyse **coverage heterogeneity**, **data completeness**, and **measurement uncertainty** within open environmental datasets.
+Each station has different pollutant coverage and measurement frequency, which provides an excellent example for students to explore data completeness and measurement uncertainty in open environmental datasets.
 
 ```{r fig2b-coverage, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 2b. Pollutant coverage and measurement frequency across monitoring stations.'}
 knitr::include_graphics("images/Fig2b_Bar_Coverage.png")
@@ -83,16 +69,11 @@ knitr::include_graphics("images/Fig2b_Bar_Coverage.png")
 
 ## Data Processing Workflow
 
-The transformation from raw CSV files to harmonised analytical datasets followed a **reproducible pipeline implemented entirely in R**.  
-This process illustrates how open environmental data can be systematically prepared for both **scientific research** and **STEM learning**.
+Data from both sources were processed in R through three main stages:  
 
-The workflow consisted of **three main stages**:
-
-1. **Data cleaning and type correction** — Monthly CSVs were read, redundant columns removed, and measurement units harmonised.  
-2. **Validation of observations** — Only records with confirmed and validated readings (flagged as `VAL`) were retained to ensure data integrity.  
-3. **Restructuring and optimisation** — The validated data were **pivoted** from long to wide format and exported as **Parquet files**, improving reproducibility and computational efficiency for later analyses.
-
-This modular approach helps students visualise the logic of **data provenance**, encouraging transparency and best practices in open science.
+1. Reading and cleaning monthly CSVs (removing redundant columns and correcting data types).  
+2. Validating records with confirmed measurements (`VAL` flag).  
+3. Pivoting and compressing results into `parquet` format for efficiency and consistency.
 
 ```{r fig3-pipeline, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 3. Data acquisition, validation, and harmonisation workflow implemented in R.'}
 knitr::include_graphics("images/Fig3_Data_Pipeline.png")
@@ -102,31 +83,23 @@ knitr::include_graphics("images/Fig3_Data_Pipeline.png")
 
 # 📊 Exploratory Analysis
 
-Exploratory analysis introduces students to **descriptive statistics** and **visual analytics** in R using open environmental data.  
-The focus is on two key pollutants:
 
-- **Nitrogen dioxide (NO₂)** — a primary pollutant linked to traffic emissions.  
-- **Ozone (O₃)** — a secondary pollutant formed photochemically from NOₓ and VOCs.  
+Exploratory analysis introduces students to descriptive statistics and visual analytics in R using open environmental data.  
+The focus is on **NO₂** (a primary traffic-related pollutant) and **O₃** (a secondary pollutant formed photochemically), both key indicators of urban air quality dynamics.
 
-Together, these illustrate how human activity and atmospheric chemistry interact within urban ecosystems.
+```{r fig4a-variability, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 4. Annual variability of NO₂ and O₃ concentrations (2020–2024).'}
+knitr::include_graphics("images/Fig4_NO2_O3_Annual_Variability.png")
+```
 
 ## Annual and Seasonal Variability
-
-The temporal evolution of **NO₂** and **O₃** across 2020–2024 reflects distinct **seasonal and annual cycles** driven by emission patterns and meteorological factors.  
-Students can observe that NO₂ concentrations tend to peak in winter due to traffic density and atmospheric stability, whereas O₃ levels rise in summer as a result of higher solar radiation and photochemical activity.
-
-This comparative behaviour offers an engaging opportunity to discuss how **urban dynamics**, **weather variability**, and **chemical processes** interact in shaping local air quality.
 
 ```{r fig4-variability, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 4. Annual variability of NO₂ and O₃ concentrations (2020–2024).'}
 knitr::include_graphics("images/Fig4_NO2_O3_Annual_Variability.png")
 ```
 
 ## Distribution Analysis
-Boxplots provide an intuitive and effective way to examine **dispersion**, **central tendency**, and **extreme values** across pollutants.  
-By comparing distributions of **NO₂** and **O₃**, students can identify seasonal contrasts, interannual variability, and potential anomalies that reflect real-world emission dynamics.
-
-This section bridges **statistical literacy** and **environmental understanding**, showing how descriptive indicators translate into meaningful interpretations of urban air quality.
-
+Boxplots provide a powerful visual tool to discuss dispersion, central tendency, and outliers across pollutants.  
+In this context, students learn how descriptive statistics translate into environmental interpretation, reinforcing quantitative reasoning with real data.
 
 ```{r fig8-boxplots, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 8. Boxplots of NO₂ and O₃ concentrations across 2020–2024.'}
 knitr::include_graphics("images/Figure8_Boxplots_NO2_O3_2020_2024.png")
@@ -135,148 +108,77 @@ knitr::include_graphics("images/Figure8_Boxplots_NO2_O3_2020_2024.png")
 
 ---
 
-# 🔮 Forecasting with Prophet
+#🔮 Forecasting with Prophet
 
-Time-series forecasting introduces students to **predictive modelling** and **temporal decomposition** using open environmental data.  
-The **Prophet model** (Taylor & Letham, 2018) was selected for its interpretability, transparent structure, and robustness to missing values — essential features when teaching **reproducible forecasting** in R.
+Time-series forecasting introduces students to predictive modelling using open environmental data.  
+The **Prophet model** (Taylor & Letham, 2018) was selected for its interpretability, decomposition structure, and robustness to missing values — key features for teaching reproducible forecasting in R.
 
-Prophet decomposes a time series into three additive components:
-- **Trend** — long-term evolution of pollutant levels.  
-- **Seasonality** — recurring intra-annual fluctuations driven by meteorological and behavioural factors.  
-- **Residuals** — short-term deviations related to random or episodic events.
+## Model for NO₂
 
-This section helps students explore **how patterns evolve over time**, interpret the **drivers of air quality**, and experiment with **forecast horizons** and **validation strategies** (e.g., RMSE, MAE).
-
----
-
-## 🌆 Model for NO₂
-
-The NO₂ series reflects anthropogenic influence, particularly road traffic and winter meteorological inversions.  
-Students can visualise how the Prophet model isolates these periodic and structural patterns, highlighting long-term decline and seasonal peaks.
-
+Students can visualise how additive components — trend, seasonality, and residuals — reveal the influence of human activity and meteorological cycles on pollutant evolution.
+This exercise supports reproducible experimentation with forecasting horizons, cross-validation, and performance metrics such as RMSE or MAE.
 
 ```{r fig5a-prophet-no2, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 5a. Prophet forecast for NO₂ concentrations (2020–2024).'}
 knitr::include_graphics("images/Fig5a_Prophet_NO2_F.png")
 ```
 
-## 🌤 Model for O₃
-
-Ozone concentrations display the opposite behaviour — increasing in summer under high solar radiation.
-Prophet effectively captures the photochemical formation dynamics and seasonal oscillations, reinforcing the complementarity between NO₂ and O₃.
-
 ```{r fig5b-prophet-O3, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 5b. Prophet forecast for O₃ concentrations (2020–2024).'}
 knitr::include_graphics("images/Fig5b_Prophet_O3_F.png")
 ```
+
 
 ---
 
 # 🌦 Meteorological Integration
 
-Meteorological factors critically influence the behaviour, transformation, and dispersion of air pollutants.  
-Integrating **meteorological variables**—temperature, solar radiation, humidity, and wind speed—from **AEMET** allows students to explore the coupled dynamics between atmospheric conditions and air quality indicators.
-
-This integration exemplifies how open data from different institutions can be harmonised into a single reproducible analytical framework.  
-By analysing these variables together, learners understand how **synoptic patterns** and **urban microclimates** shape pollutant variability.
-
+Meteorological factors shape pollutant behaviour and are fundamental in understanding atmospheric processes.  
+By integrating temperature, solar radiation, and wind speed data from **AEMET**, learners can explore multivariate relationships within an urban ecosystem.
 
 ## Integration Workflow
-
-The following workflow summarises the harmonisation of meteorological and air-quality datasets.  
-It demonstrates how data alignment, temporal aggregation, and joint visualisation enable multivariate environmental analysis in R.
 
 ```{r fig7-meteo, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 7. Integration workflow of meteorological and air quality data (2020–2024).'}
 knitr::include_graphics("images/Fig7_Meteorological_Data_Integration_Workflow_2020_2024.png")
 ```
 
+
 ---
 
 # 🎓 Learning and Reproducibility Framework
 
-Reproducibility is both a **scientific principle** and a **pedagogical value**.  
-This framework connects open data, transparent computation, and reflective learning — empowering students to move from *data consumers* to *data producers* within a reproducible workflow.
-
-Through R and Quarto, learners gain not only coding skills but also an understanding of how reproducibility sustains credibility and collaboration in science.  
-The visual framework below represents the **ecosystem of reproducible learning**, where environmental data analysis becomes an educational strategy for open, inquiry-based STEM education.
+Reproducibility is both a scientific and pedagogical value.  
+This framework unifies open data, transparent computation, and educational innovation, reinforcing the culture of **open science**.
 
 ```{r fig6-learning, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 6. Reproducible learning and open-science framework for STEM education.'}
 knitr::include_graphics("images/Fig6_Learning_Reproducibility_Ecosystem.png")
 ```
 
----
-
-# 🌀 Spatio-Temporal Variability and Atmospheric Drivers
-
-Understanding pollutant variability across **time** and **space** provides a crucial bridge between descriptive analysis and causal interpretation.  
-This section integrates the temporal and spatial dimensions of air quality, followed by their linkage with meteorological variables that modulate pollutant dynamics in the urban atmosphere.
 
 ---
 
-## ⏱ Temporal and Spatial Variability
+# 🧑‍🏫  Educational Applications
 
-The temporal evolution of NO₂ and O₃ between 2020–2024 shows clear annual cycles and gradual post-pandemic recovery patterns.  
-Spatially, concentrations differ by **station type** (urban-traffic, suburban, background), reflecting local emission sources and micro-meteorological effects.
 
-```{r fig9-variability, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 9. Temporal and spatial variability of NO₂ and O₃ across Madrid monitoring stations (2020–2024).'}
-knitr::include_graphics("images/Figure9_Temporal_Spatial_Variability.png")
-```
+This Notebook can be directly incorporated into undergraduate or postgraduate STEM courses focused on data analysis, environmental informatics, or sustainability.
 
----
+**Suggested learning activities:**
+1. Reproduce pollutant forecasts with modified training periods.  
+2. Explore correlations between additional meteorological variables.  
+3. Design inquiry-based projects connecting data to local environmental policies.  
+4. Document and publish reproducible reports using Quarto and GitHub.
 
-# 🌦 Meteorological Influence
-
-Meteorological conditions strongly influence pollutant dynamics by shaping transport, dispersion, and chemical transformation processes.  
-Within the urban boundary layer, parameters such as **temperature**, **wind speed**, **humidity**, **solar radiation**, **pressure**, and **precipitation** determine how NO₂ and O₃ interact over time.
-
-This section helps students explore the **coupled variability** between pollutants and meteorological drivers, reinforcing the interdisciplinary nature of environmental data analysis in R.
-
-```{r fig10-meteo, echo=FALSE, fig.align='center', out.width='95%', fig.cap='Fig. 10. Coupled variability of NO₂ and O₃ with meteorological variables (2020–2024).'}
-knitr::include_graphics("images/Fig10_NO2_O3_vs_Meteorology.png")
-```
-
----
-
-# 🧑‍🏫 Educational Applications
-
-Within this framework, **reproducibility** acts as a bridge between academic rigour and educational innovation.  
-It transforms the learning process into a participatory and evidence-based experience, connecting environmental science, data analysis, and civic engagement.
-
-**Core educational dimensions:**
-
-- 🔍 **Transparency** — All analyses and visualisations can be replicated, modified, and extended.  
-- 🌍 **Engagement** — Students explore socially relevant, real-world datasets on urban air quality and sustainability.  
-- 💡 **Open pedagogy** — Scripts, notebooks, and outputs are shared openly, fostering peer learning and collaboration.  
-- 🧠 **Skill transfer** — Learners develop competences in R, data science, and environmental interpretation.  
-- 🪴 **Scientific integrity** — Each analytical decision is documented, reinforcing traceability and accountability in research.
-
-This integrative approach nurtures a culture of **openness and reproducibility**, aligning STEM education with the broader movement of **Open Science** and **citizen participation**.  
-By engaging with real environmental data, students transition from passive consumers of information to active contributors in the pursuit of sustainable urban futures.
+Through these exercises, students not only practise coding but also embrace scientific integrity and civic engagement through data.
 
 ---
 
 # 🌐 Repository and Citation
 
-All code, figures, and harmonised datasets used in this notebook are openly available in the companion GitHub repository:  
-[🔗 OpenUrbanAirandMeteorological — GitHub Repository](https://github.com/jcaceres-academico/OpenUrbanAirandMeteorological)
+All code, figures, and harmonised datasets are openly available at:  
+[https://github.com/jcaceres-academico/OpenUrbanAirandMeteorological](https://github.com/jcaceres-academico/OpenUrbanAirandMeteorological)
 
-This repository guarantees **transparency**, **traceability**, and **reusability** of all materials developed in the study, enabling reproducible and educational reuse in R and Quarto.
+When citing this educational resource, please use:
 
-When citing this notebook or the associated research article, please use the following citation (APA 7th Edition):
+> Cáceres-Tello, J.; Galán-Hernández, J.J. (2025). *Citizen Science and STEM Education with R: Reproducible Learning from Open Urban Air Quality Data.* *Applied Sciences*, 15(x), xxxx.  
+> DOI: [placeholder]
 
-> [@Caceres2025]
+This ensures traceability and recognition for open-source academic contributions.
 
----
-
-💾 **Repository contents**
-
-- `docs/` — Quarto notebook (`.qmd`) and rendered HTML output  
-- `docs/images/` — Figures (PNG) used throughout the notebook  
-- `scripts/` — R scripts for preprocessing, harmonisation, and analysis  
-- `.gitignore` — Files and folders excluded from version control  
-- `LICENSE` — Open access and reuse terms  
-- `README.md` — Project overview and structure  
-
----
-
-This open repository embodies the principles of **Open Science**, promoting transparency, collaboration, and reproducibility in environmental research and STEM education.  
-
-By sharing both data and methodology, the project supports a global community of educators, students, and researchers committed to data-driven sustainability.

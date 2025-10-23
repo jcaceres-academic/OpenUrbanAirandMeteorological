@@ -22,27 +22,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="OpenUrbanAir_and_Meteorological_Workflow_files/libs/clipboard/clipboard.min.js"></script>
@@ -57,7 +37,6 @@ div.csl-indent {
 <link href="OpenUrbanAir_and_Meteorological_Workflow_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -80,24 +59,15 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#annual-and-seasonal-variability" id="toc-annual-and-seasonal-variability" class="nav-link" data-scroll-target="#annual-and-seasonal-variability"><span class="header-section-number">4.1</span> Annual and Seasonal Variability</a></li>
   <li><a href="#distribution-analysis" id="toc-distribution-analysis" class="nav-link" data-scroll-target="#distribution-analysis"><span class="header-section-number">4.2</span> Distribution Analysis</a></li>
+  <li><a href="#model-for-no₂" id="toc-model-for-no₂" class="nav-link" data-scroll-target="#model-for-no₂"><span class="header-section-number">4.3</span> Model for NO₂</a></li>
   </ul></li>
-  <li><a href="#forecasting-with-prophet" id="toc-forecasting-with-prophet" class="nav-link" data-scroll-target="#forecasting-with-prophet"><span class="header-section-number">5</span> 🔮 Forecasting with Prophet</a>
+  <li><a href="#meteorological-integration" id="toc-meteorological-integration" class="nav-link" data-scroll-target="#meteorological-integration"><span class="header-section-number">5</span> 🌦 Meteorological Integration</a>
   <ul class="collapse">
-  <li><a href="#model-for-no₂" id="toc-model-for-no₂" class="nav-link" data-scroll-target="#model-for-no₂"><span class="header-section-number">5.1</span> 🌆 Model for NO₂</a></li>
-  <li><a href="#model-for-o₃" id="toc-model-for-o₃" class="nav-link" data-scroll-target="#model-for-o₃"><span class="header-section-number">5.2</span> 🌤 Model for O₃</a></li>
+  <li><a href="#integration-workflow" id="toc-integration-workflow" class="nav-link" data-scroll-target="#integration-workflow"><span class="header-section-number">5.1</span> Integration Workflow</a></li>
   </ul></li>
-  <li><a href="#meteorological-integration" id="toc-meteorological-integration" class="nav-link" data-scroll-target="#meteorological-integration"><span class="header-section-number">6</span> 🌦 Meteorological Integration</a>
-  <ul class="collapse">
-  <li><a href="#integration-workflow" id="toc-integration-workflow" class="nav-link" data-scroll-target="#integration-workflow"><span class="header-section-number">6.1</span> Integration Workflow</a></li>
-  </ul></li>
-  <li><a href="#learning-and-reproducibility-framework" id="toc-learning-and-reproducibility-framework" class="nav-link" data-scroll-target="#learning-and-reproducibility-framework"><span class="header-section-number">7</span> 🎓 Learning and Reproducibility Framework</a></li>
-  <li><a href="#spatio-temporal-variability-and-atmospheric-drivers" id="toc-spatio-temporal-variability-and-atmospheric-drivers" class="nav-link" data-scroll-target="#spatio-temporal-variability-and-atmospheric-drivers"><span class="header-section-number">8</span> 🌀 Spatio-Temporal Variability and Atmospheric Drivers</a>
-  <ul class="collapse">
-  <li><a href="#temporal-and-spatial-variability" id="toc-temporal-and-spatial-variability" class="nav-link" data-scroll-target="#temporal-and-spatial-variability"><span class="header-section-number">8.1</span> ⏱ Temporal and Spatial Variability</a></li>
-  </ul></li>
-  <li><a href="#meteorological-influence" id="toc-meteorological-influence" class="nav-link" data-scroll-target="#meteorological-influence"><span class="header-section-number">9</span> 🌦 Meteorological Influence</a></li>
-  <li><a href="#educational-applications" id="toc-educational-applications" class="nav-link" data-scroll-target="#educational-applications"><span class="header-section-number">10</span> 🧑‍🏫 Educational Applications</a></li>
-  <li><a href="#repository-and-citation" id="toc-repository-and-citation" class="nav-link" data-scroll-target="#repository-and-citation"><span class="header-section-number">11</span> 🌐 Repository and Citation</a></li>
+  <li><a href="#learning-and-reproducibility-framework" id="toc-learning-and-reproducibility-framework" class="nav-link" data-scroll-target="#learning-and-reproducibility-framework"><span class="header-section-number">6</span> 🎓 Learning and Reproducibility Framework</a></li>
+  <li><a href="#educational-applications" id="toc-educational-applications" class="nav-link" data-scroll-target="#educational-applications"><span class="header-section-number">7</span> 🧑‍🏫 Educational Applications</a></li>
+  <li><a href="#repository-and-citation" id="toc-repository-and-citation" class="nav-link" data-scroll-target="#repository-and-citation"><span class="header-section-number">8</span> 🌐 Repository and Citation</a></li>
   </ul>
 </nav>
 </div>
@@ -121,7 +91,7 @@ div.csl-indent {
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
-            Department of Computer Science and Engineering, Complutense University of Madrid
+            Faculty of Computer Science, Complutense University of Madrid
           </p>
       </div>
     <div class="quarto-title-meta-contents">
@@ -173,20 +143,8 @@ It can be applied to other urban contexts or courses focusing on environmental i
 <h1 data-number="3"><span class="header-section-number">3</span> 🗂️️ Data Sources and Structure</h1>
 <section id="air-quality-data" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="air-quality-data"><span class="header-section-number">3.1</span> Air Quality Data</h2>
-<p>Air quality datasets were obtained from the <strong>Madrid Open Data Portal</strong> (<em>Portal de Datos Abiertos del Ayuntamiento de Madrid</em>).<br>
-These include hourly measurements for the period <strong>2020–2024</strong>, covering major urban pollutants:</p>
-<ul>
-<li>Nitrogen dioxide (<strong>NO₂</strong>)<br>
-</li>
-<li>Ozone (<strong>O₃</strong>)<br>
-</li>
-<li>Particulate matter (<strong>PM₁₀</strong>, <strong>PM₂.₅</strong>)<br>
-</li>
-<li>Sulphur dioxide (<strong>SO₂</strong>)<br>
-</li>
-<li>Carbon monoxide (<strong>CO</strong>)</li>
-</ul>
-<p>Twenty-four urban monitoring stations distributed across the metropolitan area provide these observations, enabling both <strong>spatial</strong> and <strong>temporal</strong> analysis.</p>
+<p>Air quality datasets were retrieved from the <strong>Madrid Open Data Portal</strong> (<em>Portal de Datos Abiertos del Ayuntamiento de Madrid</em>).<br>
+Measurements include nitrogen dioxide (NO₂), ozone (O₃), particulate matter (PM₁₀, PM₂.₅), sulphur dioxide (SO₂), and carbon monoxide (CO) recorded hourly across 24 urban stations (2020–2024).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -200,8 +158,7 @@ These include hourly measurements for the period <strong>2020–2024</strong>, c
 </section>
 <section id="pollutant-coverage" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="pollutant-coverage"><span class="header-section-number">3.2</span> Pollutant Coverage</h2>
-<p>Each monitoring station is characterised by its specific set of measured pollutants and sampling frequency.<br>
-This diversity in sensor configuration offers an ideal opportunity for students to analyse <strong>coverage heterogeneity</strong>, <strong>data completeness</strong>, and <strong>measurement uncertainty</strong> within open environmental datasets.</p>
+<p>Each station has different pollutant coverage and measurement frequency, which provides an excellent example for students to explore data completeness and measurement uncertainty in open environmental datasets.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -215,17 +172,14 @@ This diversity in sensor configuration offers an ideal opportunity for students 
 </section>
 <section id="data-processing-workflow" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="data-processing-workflow"><span class="header-section-number">3.3</span> Data Processing Workflow</h2>
-<p>The transformation from raw CSV files to harmonised analytical datasets followed a <strong>reproducible pipeline implemented entirely in R</strong>.<br>
-This process illustrates how open environmental data can be systematically prepared for both <strong>scientific research</strong> and <strong>STEM learning</strong>.</p>
-<p>The workflow consisted of <strong>three main stages</strong>:</p>
+<p>Data from both sources were processed in R through three main stages:</p>
 <ol type="1">
-<li><strong>Data cleaning and type correction</strong> — Monthly CSVs were read, redundant columns removed, and measurement units harmonised.<br>
+<li>Reading and cleaning monthly CSVs (removing redundant columns and correcting data types).<br>
 </li>
-<li><strong>Validation of observations</strong> — Only records with confirmed and validated readings (flagged as <code>VAL</code>) were retained to ensure data integrity.<br>
+<li>Validating records with confirmed measurements (<code>VAL</code> flag).<br>
 </li>
-<li><strong>Restructuring and optimisation</strong> — The validated data were <strong>pivoted</strong> from long to wide format and exported as <strong>Parquet files</strong>, improving reproducibility and computational efficiency for later analyses.</li>
+<li>Pivoting and compressing results into <code>parquet</code> format for efficiency and consistency.</li>
 </ol>
-<p>This modular approach helps students visualise the logic of <strong>data provenance</strong>, encouraging transparency and best practices in open science.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -241,19 +195,20 @@ This process illustrates how open environmental data can be systematically prepa
 </section>
 <section id="exploratory-analysis" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> 📊 Exploratory Analysis</h1>
-<p>Exploratory analysis introduces students to <strong>descriptive statistics</strong> and <strong>visual analytics</strong> in R using open environmental data.<br>
-The focus is on two key pollutants:</p>
-<ul>
-<li><strong>Nitrogen dioxide (NO₂)</strong> — a primary pollutant linked to traffic emissions.<br>
-</li>
-<li><strong>Ozone (O₃)</strong> — a secondary pollutant formed photochemically from NOₓ and VOCs.</li>
-</ul>
-<p>Together, these illustrate how human activity and atmospheric chemistry interact within urban ecosystems.</p>
+<p>Exploratory analysis introduces students to descriptive statistics and visual analytics in R using open environmental data.<br>
+The focus is on <strong>NO₂</strong> (a primary traffic-related pollutant) and <strong>O₃</strong> (a secondary pollutant formed photochemically), both key indicators of urban air quality dynamics.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Fig4_NO2_O3_Annual_Variability.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Fig. 4. Annual variability of NO₂ and O₃ concentrations (2020–2024).</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <section id="annual-and-seasonal-variability" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="annual-and-seasonal-variability"><span class="header-section-number">4.1</span> Annual and Seasonal Variability</h2>
-<p>The temporal evolution of <strong>NO₂</strong> and <strong>O₃</strong> across 2020–2024 reflects distinct <strong>seasonal and annual cycles</strong> driven by emission patterns and meteorological factors.<br>
-Students can observe that NO₂ concentrations tend to peak in winter due to traffic density and atmospheric stability, whereas O₃ levels rise in summer as a result of higher solar radiation and photochemical activity.</p>
-<p>This comparative behaviour offers an engaging opportunity to discuss how <strong>urban dynamics</strong>, <strong>weather variability</strong>, and <strong>chemical processes</strong> interact in shaping local air quality.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -267,9 +222,8 @@ Students can observe that NO₂ concentrations tend to peak in winter due to tra
 </section>
 <section id="distribution-analysis" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="distribution-analysis"><span class="header-section-number">4.2</span> Distribution Analysis</h2>
-<p>Boxplots provide an intuitive and effective way to examine <strong>dispersion</strong>, <strong>central tendency</strong>, and <strong>extreme values</strong> across pollutants.<br>
-By comparing distributions of <strong>NO₂</strong> and <strong>O₃</strong>, students can identify seasonal contrasts, interannual variability, and potential anomalies that reflect real-world emission dynamics.</p>
-<p>This section bridges <strong>statistical literacy</strong> and <strong>environmental understanding</strong>, showing how descriptive indicators translate into meaningful interpretations of urban air quality.</p>
+<p>Boxplots provide a powerful visual tool to discuss dispersion, central tendency, and outliers across pollutants.<br>
+In this context, students learn how descriptive statistics translate into environmental interpretation, reinforcing quantitative reasoning with real data.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -281,21 +235,13 @@ By comparing distributions of <strong>NO₂</strong> and <strong>O₃</strong>, 
 </div>
 </div>
 <hr>
+<p>#🔮 Forecasting with Prophet</p>
+<p>Time-series forecasting introduces students to predictive modelling using open environmental data.<br>
+The <strong>Prophet model</strong> (Taylor &amp; Letham, 2018) was selected for its interpretability, decomposition structure, and robustness to missing values — key features for teaching reproducible forecasting in R.</p>
 </section>
-</section>
-<section id="forecasting-with-prophet" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 🔮 Forecasting with Prophet</h1>
-<p>Time-series forecasting introduces students to <strong>predictive modelling</strong> and <strong>temporal decomposition</strong> using open environmental data.<br>
-The <strong>Prophet model</strong> (Taylor &amp; Letham, 2018) was selected for its interpretability, transparent structure, and robustness to missing values — essential features when teaching <strong>reproducible forecasting</strong> in R.</p>
-<p>Prophet decomposes a time series into three additive components: - <strong>Trend</strong> — long-term evolution of pollutant levels.<br>
-- <strong>Seasonality</strong> — recurring intra-annual fluctuations driven by meteorological and behavioural factors.<br>
-- <strong>Residuals</strong> — short-term deviations related to random or episodic events.</p>
-<p>This section helps students explore <strong>how patterns evolve over time</strong>, interpret the <strong>drivers of air quality</strong>, and experiment with <strong>forecast horizons</strong> and <strong>validation strategies</strong> (e.g., RMSE, MAE).</p>
-<hr>
-<section id="model-for-no₂" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="model-for-no₂"><span class="header-section-number">5.1</span> 🌆 Model for NO₂</h2>
-<p>The NO₂ series reflects anthropogenic influence, particularly road traffic and winter meteorological inversions.<br>
-Students can visualise how the Prophet model isolates these periodic and structural patterns, highlighting long-term decline and seasonal peaks.</p>
+<section id="model-for-no₂" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="model-for-no₂"><span class="header-section-number">4.3</span> Model for NO₂</h2>
+<p>Students can visualise how additive components — trend, seasonality, and residuals — reveal the influence of human activity and meteorological cycles on pollutant evolution. This exercise supports reproducible experimentation with forecasting horizons, cross-validation, and performance metrics such as RMSE or MAE.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -306,10 +252,6 @@ Students can visualise how the Prophet model isolates these periodic and structu
 </div>
 </div>
 </div>
-</section>
-<section id="model-for-o₃" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="model-for-o₃"><span class="header-section-number">5.2</span> 🌤 Model for O₃</h2>
-<p>Ozone concentrations display the opposite behaviour — increasing in summer under high solar radiation. Prophet effectively captures the photochemical formation dynamics and seasonal oscillations, reinforcing the complementarity between NO₂ and O₃.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -323,16 +265,12 @@ Students can visualise how the Prophet model isolates these periodic and structu
 <hr>
 </section>
 </section>
-<section id="meteorological-integration" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> 🌦 Meteorological Integration</h1>
-<p>Meteorological factors critically influence the behaviour, transformation, and dispersion of air pollutants.<br>
-Integrating <strong>meteorological variables</strong>—temperature, solar radiation, humidity, and wind speed—from <strong>AEMET</strong> allows students to explore the coupled dynamics between atmospheric conditions and air quality indicators.</p>
-<p>This integration exemplifies how open data from different institutions can be harmonised into a single reproducible analytical framework.<br>
-By analysing these variables together, learners understand how <strong>synoptic patterns</strong> and <strong>urban microclimates</strong> shape pollutant variability.</p>
-<section id="integration-workflow" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="integration-workflow"><span class="header-section-number">6.1</span> Integration Workflow</h2>
-<p>The following workflow summarises the harmonisation of meteorological and air-quality datasets.<br>
-It demonstrates how data alignment, temporal aggregation, and joint visualisation enable multivariate environmental analysis in R.</p>
+<section id="meteorological-integration" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 🌦 Meteorological Integration</h1>
+<p>Meteorological factors shape pollutant behaviour and are fundamental in understanding atmospheric processes.<br>
+By integrating temperature, solar radiation, and wind speed data from <strong>AEMET</strong>, learners can explore multivariate relationships within an urban ecosystem.</p>
+<section id="integration-workflow" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="integration-workflow"><span class="header-section-number">5.1</span> Integration Workflow</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -346,12 +284,10 @@ It demonstrates how data alignment, temporal aggregation, and joint visualisatio
 <hr>
 </section>
 </section>
-<section id="learning-and-reproducibility-framework" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> 🎓 Learning and Reproducibility Framework</h1>
-<p>Reproducibility is both a <strong>scientific principle</strong> and a <strong>pedagogical value</strong>.<br>
-This framework connects open data, transparent computation, and reflective learning — empowering students to move from <em>data consumers</em> to <em>data producers</em> within a reproducible workflow.</p>
-<p>Through R and Quarto, learners gain not only coding skills but also an understanding of how reproducibility sustains credibility and collaboration in science.<br>
-The visual framework below represents the <strong>ecosystem of reproducible learning</strong>, where environmental data analysis becomes an educational strategy for open, inquiry-based STEM education.</p>
+<section id="learning-and-reproducibility-framework" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 🎓 Learning and Reproducibility Framework</h1>
+<p>Reproducibility is both a scientific and pedagogical value.<br>
+This framework unifies open data, transparent computation, and educational innovation, reinforcing the culture of <strong>open science</strong>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -364,100 +300,29 @@ The visual framework below represents the <strong>ecosystem of reproducible lear
 </div>
 <hr>
 </section>
-<section id="spatio-temporal-variability-and-atmospheric-drivers" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> 🌀 Spatio-Temporal Variability and Atmospheric Drivers</h1>
-<p>Understanding pollutant variability across <strong>time</strong> and <strong>space</strong> provides a crucial bridge between descriptive analysis and causal interpretation.<br>
-This section integrates the temporal and spatial dimensions of air quality, followed by their linkage with meteorological variables that modulate pollutant dynamics in the urban atmosphere.</p>
-<hr>
-<section id="temporal-and-spatial-variability" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="temporal-and-spatial-variability"><span class="header-section-number">8.1</span> ⏱ Temporal and Spatial Variability</h2>
-<p>The temporal evolution of NO₂ and O₃ between 2020–2024 shows clear annual cycles and gradual post-pandemic recovery patterns.<br>
-Spatially, concentrations differ by <strong>station type</strong> (urban-traffic, suburban, background), reflecting local emission sources and micro-meteorological effects.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Figure9_Temporal_Spatial_Variability.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption>Fig. 9. Temporal and spatial variability of NO₂ and O₃ across Madrid monitoring stations (2020–2024).</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<section id="educational-applications" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> 🧑‍🏫 Educational Applications</h1>
+<p>This Notebook can be directly incorporated into undergraduate or postgraduate STEM courses focused on data analysis, environmental informatics, or sustainability.</p>
+<p><strong>Suggested learning activities:</strong> 1. Reproduce pollutant forecasts with modified training periods.<br>
+2. Explore correlations between additional meteorological variables.<br>
+3. Design inquiry-based projects connecting data to local environmental policies.<br>
+4. Document and publish reproducible reports using Quarto and GitHub.</p>
+<p>Through these exercises, students not only practise coding but also embrace scientific integrity and civic engagement through data.</p>
 <hr>
 </section>
-</section>
-<section id="meteorological-influence" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> 🌦 Meteorological Influence</h1>
-<p>Meteorological conditions strongly influence pollutant dynamics by shaping transport, dispersion, and chemical transformation processes.<br>
-Within the urban boundary layer, parameters such as <strong>temperature</strong>, <strong>wind speed</strong>, <strong>humidity</strong>, <strong>solar radiation</strong>, <strong>pressure</strong>, and <strong>precipitation</strong> determine how NO₂ and O₃ interact over time.</p>
-<p>This section helps students explore the <strong>coupled variability</strong> between pollutants and meteorological drivers, reinforcing the interdisciplinary nature of environmental data analysis in R.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Fig10_NO2_O3_vs_Meteorology.png" class="img-fluid figure-img" style="width:95.0%"></p>
-<figcaption>Fig. 10. Coupled variability of NO₂ and O₃ with meteorological variables (2020–2024).</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="educational-applications" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> 🧑‍🏫 Educational Applications</h1>
-<p>Within this framework, <strong>reproducibility</strong> acts as a bridge between academic rigour and educational innovation.<br>
-It transforms the learning process into a participatory and evidence-based experience, connecting environmental science, data analysis, and civic engagement.</p>
-<p><strong>Core educational dimensions:</strong></p>
-<ul>
-<li>🔍 <strong>Transparency</strong> — All analyses and visualisations can be replicated, modified, and extended.<br>
-</li>
-<li>🌍 <strong>Engagement</strong> — Students explore socially relevant, real-world datasets on urban air quality and sustainability.<br>
-</li>
-<li>💡 <strong>Open pedagogy</strong> — Scripts, notebooks, and outputs are shared openly, fostering peer learning and collaboration.<br>
-</li>
-<li>🧠 <strong>Skill transfer</strong> — Learners develop competences in R, data science, and environmental interpretation.<br>
-</li>
-<li>🪴 <strong>Scientific integrity</strong> — Each analytical decision is documented, reinforcing traceability and accountability in research.</li>
-</ul>
-<p>This integrative approach nurtures a culture of <strong>openness and reproducibility</strong>, aligning STEM education with the broader movement of <strong>Open Science</strong> and <strong>citizen participation</strong>.<br>
-By engaging with real environmental data, students transition from passive consumers of information to active contributors in the pursuit of sustainable urban futures.</p>
-<hr>
-</section>
-<section id="repository-and-citation" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> 🌐 Repository and Citation</h1>
-<p>All code, figures, and harmonised datasets used in this notebook are openly available in the companion GitHub repository:<br>
-<a href="https://github.com/jcaceres-academico/OpenUrbanAirandMeteorological">🔗 OpenUrbanAirandMeteorological — GitHub Repository</a></p>
-<p>This repository guarantees <strong>transparency</strong>, <strong>traceability</strong>, and <strong>reusability</strong> of all materials developed in the study, enabling reproducible and educational reuse in R and Quarto.</p>
-<p>When citing this notebook or the associated research article, please use the following citation (APA 7th Edition):</p>
+<section id="repository-and-citation" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> 🌐 Repository and Citation</h1>
+<p>All code, figures, and harmonised datasets are openly available at:<br>
+<a href="https://github.com/jcaceres-academico/OpenUrbanAirandMeteorological">https://github.com/jcaceres-academico/OpenUrbanAirandMeteorological</a></p>
+<p>When citing this educational resource, please use:</p>
 <blockquote class="blockquote">
-<p><span class="citation" data-cites="Caceres2025">(<a href="#ref-Caceres2025" role="doc-biblioref">Cáceres-Tello &amp; Galán-Hernández, 2025</a>)</span></p>
+<p>Cáceres-Tello, J.; Galán-Hernández, J.J. (2025). <em>Citizen Science and STEM Education with R: Reproducible Learning from Open Urban Air Quality Data.</em> <em>Applied Sciences</em>, 15(x), xxxx.<br>
+DOI: [placeholder]</p>
 </blockquote>
-<hr>
-<p>💾 <strong>Repository contents</strong></p>
-<ul>
-<li><code>docs/</code> — Quarto notebook (<code>.qmd</code>) and rendered HTML output<br>
-</li>
-<li><code>docs/images/</code> — Figures (PNG) used throughout the notebook<br>
-</li>
-<li><code>scripts/</code> — R scripts for preprocessing, harmonisation, and analysis<br>
-</li>
-<li><code>.gitignore</code> — Files and folders excluded from version control<br>
-</li>
-<li><code>LICENSE</code> — Open access and reuse terms<br>
-</li>
-<li><code>README.md</code> — Project overview and structure</li>
-</ul>
-<hr>
-<p>This open repository embodies the principles of <strong>Open Science</strong>, promoting transparency, collaboration, and reproducibility in environmental research and STEM education.</p>
-<p>By sharing both data and methodology, the project supports a global community of educators, students, and researchers committed to data-driven sustainability.</p>
-
+<p>This ensures traceability and recognition for open-source academic contributions.</p>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-Caceres2025" class="csl-entry" role="listitem">
-Cáceres-Tello, J., &amp; Galán-Hernández, J. J. (2025). Citizen science and STEM education with r: Reproducible learning from open urban air quality data. <em>Applied Sciences</em>, <em>15</em>(x), xxx–xxx. <a href="https://doi.org/10.xxxx/appsx.xxxxx">https://doi.org/10.xxxx/appsx.xxxxx</a>
-</div>
-</div></section></div></main>
+</main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
