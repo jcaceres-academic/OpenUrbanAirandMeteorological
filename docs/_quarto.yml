@@ -6,25 +6,32 @@ website:
   title: "Open Urban Air and Meteorological Data"
   navbar:
     background: "#7A0026"
-    foreground: "white"
-    pinned: true
+    logo: ""
     right:
       - text: "🏠 Home"
-        href: "https://jcaceres-academic.github.io"
+        href: index.html
       - text: "📄 Article"
-        href: "article.pdf"
+        href: article.pdf
       - text: "📘 Notebook"
-        href: "notebook.html"
+        href: notebook.html
       - text: "💻 GitHub"
-        href: "https://github.com/jcaceres-academic/OpenUrbanAirandMeteorological"
+        href: https://github.com/jcaceres-academic/OpenUrbanAirandMeteorological
+  page-navigation: true
+  search: false
 
 format:
   html:
-    allow-html: true
-    theme: flatly
-    css: styles.css
+    theme: cosmo
+    css: styles.css  
     toc: true
     toc-location: left
-    number-sections: false
-    code-fold: false
+    toc-title: "On this page"
+    link-external-icon: false
     smooth-scroll: true
+    number-sections: false
+    code-copy: true
+    code-overflow: wrap
+    allow-html: true
+
+editor: visual
+

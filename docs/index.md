@@ -91,11 +91,8 @@ OpenUrbanAirandMeteorological/
 ## 🧭 Educational Use
 
 This repository supports STEM education by providing:
-
 Hands-on examples for environmental informatics and sustainability courses
-
 Open-source reproducible R-Quarto workflow
-
 Didactic visualisations for citizen science and air quality literacy
 
 ## 📚 Citation
