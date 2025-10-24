@@ -1,20 +1,18 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "OpenUrbanAirandMeteorological"
+  title: "Open Urban Air and Meteorological Data"
   navbar:
     background: "#7A0026"
+    foreground: "white"
     pinned: true
-    left:
+    right:
       - text: "🏠 Home"
-        href: "https://jcaceres-academic.github.io/"
-        target: "_blank"
-      - text: "📍 Project"
-        href: "index.html"
+        href: "https://jcaceres-academic.github.io"
       - text: "📄 Article"
         href: "article.pdf"
-        id: "article-link"
       - text: "📘 Notebook"
         href: "notebook.html"
       - text: "💻 GitHub"
@@ -22,9 +20,10 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: flatly
+    css: styles.css
     toc: true
     toc-location: left
+    number-sections: false
+    code-fold: false
     smooth-scroll: true
-    page-navigation: true
-    css: styles.css

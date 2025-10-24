@@ -1,13 +1,14 @@
-/* Estilo general del título principal */
+/* ============================================================
+   🔹 Títulos y subtítulos — tu configuración original
+   ============================================================ */
 .quarto-title-block .title {
-  font-size: 2.8rem;        /* tamaño mayor del título */
-  font-weight: 700;         /* más grueso */
-  color: #1a1a1a;           /* color neutro oscuro */
-  text-align: center;       /* centrado */
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
   margin-bottom: 0.4em;
 }
 
-/* Subtítulo más pequeño y con tono gris */
 .quarto-title-block .subtitle {
   font-size: 1.4rem;
   color: #555;
@@ -16,27 +17,94 @@
   margin-bottom: 1.2em;
 }
 
-/* Opcional: autores centrados también */
 .quarto-title-block .quarto-title-authors {
   text-align: center;
 }
 
-/* ----- Personalización del título del índice (Table of Contents) ----- */
-
-/* Aumenta tamaño y pone en negrita la palabra "Contents" */
+/* ============================================================
+   🔹 Estilo del índice lateral (TOC)
+   ============================================================ */
 .sidebar-title {
-  font-size: 1.1rem;      /* aumenta un poco el tamaño */
-  font-weight: 700;       /* negrita */
-  color: #1a1a1a;         /* color negro neutro (puedes cambiar a #003366 si quieres azul UCM) */
-  text-transform: none;   /* mantiene mayúsculas/minúsculas originales */
-  margin-bottom: 0.6em;   /* separa ligeramente del contenido */
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-transform: none;
+  margin-bottom: 0.6em;
 }
 
-/* Opcional: resaltar visualmente el encabezado del TOC */
 .sidebar {
   border-right: 1px solid #ddd;
 }
 
 .sidebar nav {
   padding-right: 0.5em;
+}
+
+/* ============================================================
+   🔹 Barra de navegación superior (burdeos institucional)
+   ============================================================ */
+.navbar {
+  background-color: #7A0026 !important;   /* burdeos UCM */
+  color: white !important;
+  border-bottom: 2px solid #5c001c;
+}
+
+.navbar a,
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.navbar a:hover,
+.navbar-nav .nav-link:hover {
+  color: #f8d7da !important;             /* rosa claro al hover */
+}
+
+/* ============================================================
+   🔹 Encabezados generales dentro del contenido
+   ============================================================ */
+h1, h2, h3 {
+  color: #7A0026;
+}
+
+/* ============================================================
+   🔹 Enlaces y efectos hover
+   ============================================================ */
+a {
+  color: #7A0026;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9C0032;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   🔹 Estilo del TOC (sidebar) para integrarlo visualmente
+   ============================================================ */
+#TOC {
+  background: #fafafa;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* ============================================================
+   🔹 Footer opcional
+   ============================================================ */
+.footer {
+  background-color: #7A0026;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 2em;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #f8d7da;
+}
+
+.footer a:hover {
+  color: #fff;
 }

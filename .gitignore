@@ -7,6 +7,13 @@
 .Ruserdata
 
 # --------------------------
+# System / OS files
+# --------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --------------------------
 # Cache and temporary files
 # --------------------------
 *_cache/
@@ -18,30 +25,15 @@ _cache/
 *.bak
 
 # --------------------------
-# Quarto / Markdown builds
-# --------------------------
-docs/*.html
-docs/*_files/
-docs/*.pdf
-docs/*.qmd
-!docs/OpenUrbanAir_and_Meteorological_Workflow.*
-
-# --------------------------
 # Local data and cache folders
 # --------------------------
 data/
 rosm.cache/
-!data/README.md  # allow a small readme describing data sources
 
 # --------------------------
 # High-resolution figures
 # --------------------------
 figures_tiff/*.tiff
 
-# --------------------------
-# System / OS files
-# --------------------------
-.DS_Store
-Thumbs.db
-desktop.ini
+
 
