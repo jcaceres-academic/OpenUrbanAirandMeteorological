@@ -4,7 +4,6 @@ subtitle: "Citizen Science and STEM Education with R: Teaching Innovation throug
 lang: en
 ---
 
-```{=html}
 <script>
 // Disable Article link if PDF missing
 document.addEventListener("DOMContentLoaded", function() {
@@ -22,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script> 
-```
+
 
 
 # 🌍 OpenUrbanAirandMeteorological  
