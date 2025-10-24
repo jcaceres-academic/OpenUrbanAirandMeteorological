@@ -56,7 +56,7 @@ Data from both sources were processed in R through three main stages:
 ```{r fig3-pipeline, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 3. Data acquisition, validation, and harmonisation workflow implemented in R.'}
 knitr::include_graphics("images/Fig3_Data_Pipeline.png")
 ```
-
+  
 ---
 
 # 📊 Exploratory Analysis
