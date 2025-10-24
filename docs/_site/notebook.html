@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jesús Cáceres Tello">
-<meta name="author" content="José Javier Galán Hernández">
 
-<title>Citizen Science and STEM Education with R</title>
+<title>OpenUrbanAirandMeteorological</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,88 +23,147 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="OpenUrbanAir_and_Meteorological_Workflow_files/libs/clipboard/clipboard.min.js"></script>
-<script src="OpenUrbanAir_and_Meteorological_Workflow_files/libs/quarto-html/quarto.js"></script>
-<script src="OpenUrbanAir_and_Meteorological_Workflow_files/libs/quarto-html/popper.min.js"></script>
-<script src="OpenUrbanAir_and_Meteorological_Workflow_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="OpenUrbanAir_and_Meteorological_Workflow_files/libs/quarto-html/anchor.min.js"></script>
-<link href="OpenUrbanAir_and_Meteorological_Workflow_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="OpenUrbanAir_and_Meteorological_Workflow_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="OpenUrbanAir_and_Meteorological_Workflow_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="OpenUrbanAir_and_Meteorological_Workflow_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="OpenUrbanAir_and_Meteorological_Workflow_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="floating nav-fixed">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-full toc-left">
-<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
-  <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">OpenUrbanAirandMeteorological</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://jcaceres-academic.github.io/" target="_blank"> 
+<span class="menu-text">🏠 Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">📍 Project</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./article.pdf"> 
+<span class="menu-text">📄 Article</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./notebook.html" aria-current="page"> 
+<span class="menu-text">📘 Notebook</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/jcaceres-academic/OpenUrbanAirandMeteorological"> 
+<span class="menu-text">💻 GitHub</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#purpose-of-the-notebook" id="toc-purpose-of-the-notebook" class="nav-link active" data-scroll-target="#purpose-of-the-notebook"><span class="header-section-number">1</span> 💡 Purpose of the Notebook</a></li>
-  <li><a href="#reproducible-data-workflow" id="toc-reproducible-data-workflow" class="nav-link" data-scroll-target="#reproducible-data-workflow"><span class="header-section-number">2</span> 🔁 Reproducible Data Workflow</a></li>
-  <li><a href="#data-sources-and-structure" id="toc-data-sources-and-structure" class="nav-link" data-scroll-target="#data-sources-and-structure"><span class="header-section-number">3</span> 🗂️️ Data Sources and Structure</a>
+  <li><a href="#purpose-of-the-notebook" id="toc-purpose-of-the-notebook" class="nav-link active" data-scroll-target="#purpose-of-the-notebook">💡 Purpose of the Notebook</a></li>
+  <li><a href="#reproducible-data-workflow" id="toc-reproducible-data-workflow" class="nav-link" data-scroll-target="#reproducible-data-workflow">🔁 Reproducible Data Workflow</a></li>
+  <li><a href="#data-sources-and-structure" id="toc-data-sources-and-structure" class="nav-link" data-scroll-target="#data-sources-and-structure">🗂️️ Data Sources and Structure</a>
   <ul class="collapse">
-  <li><a href="#air-quality-data" id="toc-air-quality-data" class="nav-link" data-scroll-target="#air-quality-data"><span class="header-section-number">3.1</span> Air Quality Data</a></li>
-  <li><a href="#pollutant-coverage" id="toc-pollutant-coverage" class="nav-link" data-scroll-target="#pollutant-coverage"><span class="header-section-number">3.2</span> Pollutant Coverage</a></li>
-  <li><a href="#data-processing-workflow" id="toc-data-processing-workflow" class="nav-link" data-scroll-target="#data-processing-workflow"><span class="header-section-number">3.3</span> Data Processing Workflow</a></li>
+  <li><a href="#air-quality-data" id="toc-air-quality-data" class="nav-link" data-scroll-target="#air-quality-data">Air Quality Data</a></li>
+  <li><a href="#pollutant-coverage" id="toc-pollutant-coverage" class="nav-link" data-scroll-target="#pollutant-coverage">Pollutant Coverage</a></li>
+  <li><a href="#data-processing-workflow" id="toc-data-processing-workflow" class="nav-link" data-scroll-target="#data-processing-workflow">Data Processing Workflow</a></li>
   </ul></li>
-  <li><a href="#exploratory-analysis" id="toc-exploratory-analysis" class="nav-link" data-scroll-target="#exploratory-analysis"><span class="header-section-number">4</span> 📊 Exploratory Analysis</a>
+  <li><a href="#exploratory-analysis" id="toc-exploratory-analysis" class="nav-link" data-scroll-target="#exploratory-analysis">📊 Exploratory Analysis</a>
   <ul class="collapse">
-  <li><a href="#annual-and-seasonal-variability" id="toc-annual-and-seasonal-variability" class="nav-link" data-scroll-target="#annual-and-seasonal-variability"><span class="header-section-number">4.1</span> Annual and Seasonal Variability</a></li>
-  <li><a href="#distribution-analysis" id="toc-distribution-analysis" class="nav-link" data-scroll-target="#distribution-analysis"><span class="header-section-number">4.2</span> Distribution Analysis</a></li>
-  <li><a href="#model-for-no₂" id="toc-model-for-no₂" class="nav-link" data-scroll-target="#model-for-no₂"><span class="header-section-number">4.3</span> Model for NO₂</a></li>
+  <li><a href="#annual-and-seasonal-variability" id="toc-annual-and-seasonal-variability" class="nav-link" data-scroll-target="#annual-and-seasonal-variability">Annual and Seasonal Variability</a></li>
+  <li><a href="#distribution-analysis" id="toc-distribution-analysis" class="nav-link" data-scroll-target="#distribution-analysis">Distribution Analysis</a></li>
+  <li><a href="#model-for-no₂" id="toc-model-for-no₂" class="nav-link" data-scroll-target="#model-for-no₂">Model for NO₂</a></li>
   </ul></li>
-  <li><a href="#meteorological-integration" id="toc-meteorological-integration" class="nav-link" data-scroll-target="#meteorological-integration"><span class="header-section-number">5</span> 🌦 Meteorological Integration</a>
+  <li><a href="#meteorological-integration" id="toc-meteorological-integration" class="nav-link" data-scroll-target="#meteorological-integration">🌦 Meteorological Integration</a>
   <ul class="collapse">
-  <li><a href="#integration-workflow" id="toc-integration-workflow" class="nav-link" data-scroll-target="#integration-workflow"><span class="header-section-number">5.1</span> Integration Workflow</a></li>
+  <li><a href="#integration-workflow" id="toc-integration-workflow" class="nav-link" data-scroll-target="#integration-workflow">Integration Workflow</a></li>
   </ul></li>
-  <li><a href="#learning-and-reproducibility-framework" id="toc-learning-and-reproducibility-framework" class="nav-link" data-scroll-target="#learning-and-reproducibility-framework"><span class="header-section-number">6</span> 🎓 Learning and Reproducibility Framework</a></li>
-  <li><a href="#educational-applications" id="toc-educational-applications" class="nav-link" data-scroll-target="#educational-applications"><span class="header-section-number">7</span> 🧑‍🏫 Educational Applications</a></li>
-  <li><a href="#repository-and-citation" id="toc-repository-and-citation" class="nav-link" data-scroll-target="#repository-and-citation"><span class="header-section-number">8</span> 🌐 Repository and Citation</a></li>
+  <li><a href="#learning-and-reproducibility-framework" id="toc-learning-and-reproducibility-framework" class="nav-link" data-scroll-target="#learning-and-reproducibility-framework">🎓 Learning and Reproducibility Framework</a></li>
+  <li><a href="#educational-applications" id="toc-educational-applications" class="nav-link" data-scroll-target="#educational-applications">🧑‍🏫 Educational Applications</a></li>
+  <li><a href="#repository-and-citation" id="toc-repository-and-citation" class="nav-link" data-scroll-target="#repository-and-citation">🌐 Repository and Citation</a></li>
   </ul>
 </nav>
-</div>
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-</div>
-<main class="content column-page-right" id="quarto-document-content">
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Citizen Science and STEM Education with R</h1>
-<p class="subtitle lead">Teaching and Research Companion Notebook — Open Urban Air Data from Madrid (2020–2024)</p>
+<h1 class="title">OpenUrbanAirandMeteorological</h1>
 </div>
 
 
-<div class="quarto-title-meta-author column-page-right">
-  <div class="quarto-title-meta-heading">Authors</div>
-  <div class="quarto-title-meta-heading">Affiliations</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">Jesús Cáceres Tello <a href="mailto:jescacer@ucm.es" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Faculty of Computer Science, Complutense University of Madrid
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">José Javier Galán Hernández <a href="mailto:jose.galan@uah.es" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Dpto. Computer Science, University of Alcalá
-          </p>
-      </div>
-  </div>
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta">
 
-      
+    
   
     
   </div>
@@ -116,15 +173,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="purpose-of-the-notebook" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 💡 Purpose of the Notebook</h1>
+<section id="purpose-of-the-notebook" class="level1">
+<h1>💡 Purpose of the Notebook</h1>
 <p>This Quarto Notebook serves as a <strong>teaching and research companion</strong> to the article<br>
 <em>Citizen Science and STEM Education with R: Reproducible Learning from Open Urban Air Quality Data</em> (Applied Sciences, 2025).</p>
 <p>It reproduces the main analytical workflow implemented in the study and illustrates how R and Quarto can be integrated into <strong>STEM education</strong> to foster data literacy, environmental awareness, and methodological transparency.</p>
 <hr>
 </section>
-<section id="reproducible-data-workflow" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 🔁 Reproducible Data Workflow</h1>
+<section id="reproducible-data-workflow" class="level1">
+<h1>🔁 Reproducible Data Workflow</h1>
 <p>The complete workflow integrates <strong>open data</strong>, <strong>computational reproducibility</strong>, and <strong>STEM learning</strong>.<br>
 It can be applied to other urban contexts or courses focusing on environmental informatics, statistical modelling, or sustainability transitions.</p>
 <div class="cell" data-layout-align="center">
@@ -139,10 +196,10 @@ It can be applied to other urban contexts or courses focusing on environmental i
 </div>
 <hr>
 </section>
-<section id="data-sources-and-structure" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 🗂️️ Data Sources and Structure</h1>
-<section id="air-quality-data" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="air-quality-data"><span class="header-section-number">3.1</span> Air Quality Data</h2>
+<section id="data-sources-and-structure" class="level1">
+<h1>🗂️️ Data Sources and Structure</h1>
+<section id="air-quality-data" class="level2">
+<h2 class="anchored" data-anchor-id="air-quality-data">Air Quality Data</h2>
 <p>Air quality datasets were retrieved from the <strong>Madrid Open Data Portal</strong> (<em>Portal de Datos Abiertos del Ayuntamiento de Madrid</em>).<br>
 Measurements include nitrogen dioxide (NO₂), ozone (O₃), particulate matter (PM₁₀, PM₂.₅), sulphur dioxide (SO₂), and carbon monoxide (CO) recorded hourly across 24 urban stations (2020–2024).</p>
 <div class="cell" data-layout-align="center">
@@ -156,8 +213,8 @@ Measurements include nitrogen dioxide (NO₂), ozone (O₃), particulate matter 
 </div>
 </div>
 </section>
-<section id="pollutant-coverage" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="pollutant-coverage"><span class="header-section-number">3.2</span> Pollutant Coverage</h2>
+<section id="pollutant-coverage" class="level2">
+<h2 class="anchored" data-anchor-id="pollutant-coverage">Pollutant Coverage</h2>
 <p>Each station has different pollutant coverage and measurement frequency, which provides an excellent example for students to explore data completeness and measurement uncertainty in open environmental datasets.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -170,8 +227,8 @@ Measurements include nitrogen dioxide (NO₂), ozone (O₃), particulate matter 
 </div>
 </div>
 </section>
-<section id="data-processing-workflow" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="data-processing-workflow"><span class="header-section-number">3.3</span> Data Processing Workflow</h2>
+<section id="data-processing-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="data-processing-workflow">Data Processing Workflow</h2>
 <p>Data from both sources were processed in R through three main stages:</p>
 <ol type="1">
 <li>Reading and cleaning monthly CSVs (removing redundant columns and correcting data types).<br>
@@ -193,8 +250,8 @@ Measurements include nitrogen dioxide (NO₂), ozone (O₃), particulate matter 
 <hr>
 </section>
 </section>
-<section id="exploratory-analysis" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 📊 Exploratory Analysis</h1>
+<section id="exploratory-analysis" class="level1">
+<h1>📊 Exploratory Analysis</h1>
 <p>Exploratory analysis introduces students to descriptive statistics and visual analytics in R using open environmental data.<br>
 The focus is on <strong>NO₂</strong> (a primary traffic-related pollutant) and <strong>O₃</strong> (a secondary pollutant formed photochemically), both key indicators of urban air quality dynamics.</p>
 <div class="cell" data-layout-align="center">
@@ -207,8 +264,8 @@ The focus is on <strong>NO₂</strong> (a primary traffic-related pollutant) and
 </div>
 </div>
 </div>
-<section id="annual-and-seasonal-variability" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="annual-and-seasonal-variability"><span class="header-section-number">4.1</span> Annual and Seasonal Variability</h2>
+<section id="annual-and-seasonal-variability" class="level2">
+<h2 class="anchored" data-anchor-id="annual-and-seasonal-variability">Annual and Seasonal Variability</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -220,8 +277,8 @@ The focus is on <strong>NO₂</strong> (a primary traffic-related pollutant) and
 </div>
 </div>
 </section>
-<section id="distribution-analysis" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="distribution-analysis"><span class="header-section-number">4.2</span> Distribution Analysis</h2>
+<section id="distribution-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="distribution-analysis">Distribution Analysis</h2>
 <p>Boxplots provide a powerful visual tool to discuss dispersion, central tendency, and outliers across pollutants.<br>
 In this context, students learn how descriptive statistics translate into environmental interpretation, reinforcing quantitative reasoning with real data.</p>
 <div class="cell" data-layout-align="center">
@@ -239,8 +296,8 @@ In this context, students learn how descriptive statistics translate into enviro
 <p>Time-series forecasting introduces students to predictive modelling using open environmental data.<br>
 The <strong>Prophet model</strong> (Taylor &amp; Letham, 2018) was selected for its interpretability, decomposition structure, and robustness to missing values — key features for teaching reproducible forecasting in R.</p>
 </section>
-<section id="model-for-no₂" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="model-for-no₂"><span class="header-section-number">4.3</span> Model for NO₂</h2>
+<section id="model-for-no₂" class="level2">
+<h2 class="anchored" data-anchor-id="model-for-no₂">Model for NO₂</h2>
 <p>Students can visualise how additive components — trend, seasonality, and residuals — reveal the influence of human activity and meteorological cycles on pollutant evolution. This exercise supports reproducible experimentation with forecasting horizons, cross-validation, and performance metrics such as RMSE or MAE.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -265,12 +322,12 @@ The <strong>Prophet model</strong> (Taylor &amp; Letham, 2018) was selected for 
 <hr>
 </section>
 </section>
-<section id="meteorological-integration" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 🌦 Meteorological Integration</h1>
+<section id="meteorological-integration" class="level1">
+<h1>🌦 Meteorological Integration</h1>
 <p>Meteorological factors shape pollutant behaviour and are fundamental in understanding atmospheric processes.<br>
 By integrating temperature, solar radiation, and wind speed data from <strong>AEMET</strong>, learners can explore multivariate relationships within an urban ecosystem.</p>
-<section id="integration-workflow" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="integration-workflow"><span class="header-section-number">5.1</span> Integration Workflow</h2>
+<section id="integration-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="integration-workflow">Integration Workflow</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -284,8 +341,8 @@ By integrating temperature, solar radiation, and wind speed data from <strong>AE
 <hr>
 </section>
 </section>
-<section id="learning-and-reproducibility-framework" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> 🎓 Learning and Reproducibility Framework</h1>
+<section id="learning-and-reproducibility-framework" class="level1">
+<h1>🎓 Learning and Reproducibility Framework</h1>
 <p>Reproducibility is both a scientific and pedagogical value.<br>
 This framework unifies open data, transparent computation, and educational innovation, reinforcing the culture of <strong>open science</strong>.</p>
 <div class="cell" data-layout-align="center">
@@ -300,8 +357,8 @@ This framework unifies open data, transparent computation, and educational innov
 </div>
 <hr>
 </section>
-<section id="educational-applications" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> 🧑‍🏫 Educational Applications</h1>
+<section id="educational-applications" class="level1">
+<h1>🧑‍🏫 Educational Applications</h1>
 <p>This Notebook can be directly incorporated into undergraduate or postgraduate STEM courses focused on data analysis, environmental informatics, or sustainability.</p>
 <p><strong>Suggested learning activities:</strong> 1. Reproduce pollutant forecasts with modified training periods.<br>
 2. Explore correlations between additional meteorological variables.<br>
@@ -310,20 +367,21 @@ This framework unifies open data, transparent computation, and educational innov
 <p>Through these exercises, students not only practise coding but also embrace scientific integrity and civic engagement through data.</p>
 <hr>
 </section>
-<section id="repository-and-citation" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> 🌐 Repository and Citation</h1>
+<section id="repository-and-citation" class="level1">
+<h1>🌐 Repository and Citation</h1>
 <p>All code, figures, and harmonised datasets are openly available at:<br>
-<a href="https://github.com/jcaceres-academico/OpenUrbanAirandMeteorological">https://github.com/jcaceres-academico/OpenUrbanAirandMeteorological</a></p>
+<a href="https://github.com/jcaceres-academico/OpenUrbanAirandMeteorological">https://github.com/jcaceres-academic/OpenUrbanAirandMeteorological</a></p>
 <p>When citing this educational resource, please use:</p>
 <blockquote class="blockquote">
 <p>Cáceres-Tello, J.; Galán-Hernández, J.J. (2025). <em>Citizen Science and STEM Education with R: Reproducible Learning from Open Urban Air Quality Data.</em> <em>Applied Sciences</em>, 15(x), xxxx.<br>
 DOI: [placeholder]</p>
 </blockquote>
 <p>This ensures traceability and recognition for open-source academic contributions.</p>
+
+
 </section>
 
-</main>
-<!-- /main column -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -749,4 +807,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
