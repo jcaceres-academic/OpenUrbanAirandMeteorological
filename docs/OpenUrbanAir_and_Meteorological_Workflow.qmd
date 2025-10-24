@@ -44,7 +44,7 @@ It can be applied to other urban contexts or courses focusing on environmental i
 knitr::include_graphics("images/Fig1_Open_Data_and_Methodological_Pipeline.png")
 
 ```
-
+ 
 ------------------------------------------------------------------------
 
 # 🗂️️ Data Sources and Structure
