@@ -6,7 +6,7 @@ lang: en
 
 ```{=html}
 <script>
-// Disable Article link if PDF missing
+// Disable Article link if PDF missingg
 document.addEventListener("DOMContentLoaded", function() {
   fetch("article.pdf", { method: "HEAD" })
     .then(response => {
