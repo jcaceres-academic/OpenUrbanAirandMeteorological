@@ -1,5 +1,5 @@
 ---
-title: "Open Urban AirandMeteorological"
+title: "Open Urban Air and Meteorological"
 subtitle: "Citizen Science and STEM Education with R: Teaching Innovation through Open Urban Climate Data"
 lang: en
 ---
