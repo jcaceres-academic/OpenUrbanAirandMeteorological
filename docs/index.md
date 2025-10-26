@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
           link.style.pointerEvents = "none";
         }
       }
-    });
+    }); 
 });
 </script> 
 

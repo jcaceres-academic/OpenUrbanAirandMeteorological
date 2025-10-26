@@ -12,7 +12,7 @@ website:
     background: "#7A0026"
     pinned: true        # 🔒 mantiene la barra fija al hacer scroll
     right:
-      - icon: house
+      - icon: house 
         text: "Home"
         href: https://jcaceres-academic.github.io/
         target: "_self"
