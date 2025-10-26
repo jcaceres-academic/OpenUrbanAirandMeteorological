@@ -1,37 +1,47 @@
 project:
   type: website
-  output-dir: .
+  output-dir: _site
 
 website:
   title: "Open Urban Air and Meteorological Data"
-  navbar:
-    background: "#7A0026"
-    logo: ""
-    right:
-      - text: "🏠 Home"
-        href: index.html
-      - text: "📄 Article"
-        href: article.pdf
-      - text: "📘 Notebook"
-        href: notebook.html
-      - text: "💻 GitHub"
-        href: https://github.com/jcaceres-academic/OpenUrbanAirandMeteorological
+  site-url: https://jcaceres-academic.github.io/OpenUrbanAirandMeteorological/
+  description: "Citizen Science and STEM Education with R"
   page-navigation: true
   search: false
-
+  navbar:
+    background: "#7A0026"
+    pinned: true        # 🔒 mantiene la barra fija al hacer scroll
+    right:
+      - icon: house
+        text: "Home"
+        href: https://jcaceres-academic.github.io/
+        target: "_self"
+      - icon: file-earmark-text
+        text: "Article"
+        href: article.pdf
+        target: "_blank"   # 🔗 abre el PDF en una pestaña nueva
+      - icon: laptop
+        text: "Notebook"
+        href: notebook.html
+        target: "_self"
+      - icon: github
+        text: "GitHub"
+        href: https://github.com/jcaceres-academic/OpenUrbanAirandMeteorological
+        target: "_blank"
 format:
   html:
     theme: cosmo
-    css: styles.css  
+    css: styles.css
     toc: true
     toc-location: left
     toc-title: "On this page"
-    link-external-icon: false
+    toc-depth: 2
     smooth-scroll: true
-    number-sections: false
     code-copy: true
     code-overflow: wrap
-    allow-html: true
+    number-sections: false
+    lang: en
+    html-math-method: mathjax
 
 editor: visual
 

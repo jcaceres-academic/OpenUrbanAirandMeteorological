@@ -1,5 +1,5 @@
 ---
-title: "📘 Educational Notebook — OpenUrbanAirandMeteorological"
+title: "Educational Notebook"
 lang: en
 ---
 

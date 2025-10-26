@@ -1,5 +1,5 @@
 ---
-title: "OpenUrbanAirandMeteorological"
+title: "Open Urban AirandMeteorological"
 subtitle: "Citizen Science and STEM Education with R: Teaching Innovation through Open Urban Climate Data"
 lang: en
 ---
@@ -21,11 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script> 
-
-
-
-# 🌍 OpenUrbanAirandMeteorological  
-### *Citizen Science and STEM Education with R: Teaching Innovation through Open Urban Climate Data*  
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Project DOI](https://img.shields.io/badge/DOI-coming_soon-blue.svg)](https://doi.org/)

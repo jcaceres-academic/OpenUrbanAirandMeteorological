@@ -5,6 +5,14 @@
 .Rhistory
 .RData
 .Ruserdata
+*.Rproj.user/
+
+# --------------------------
+# Quarto builds
+# --------------------------
+docs/_site/
+docs/*.html
+docs/*_files/
 
 # --------------------------
 # System / OS files
@@ -31,14 +39,10 @@ data/
 rosm.cache/
 
 # --------------------------
-# Quarto / Markdown builds
-# -------------------------- 
-docs/*_files/
-
-# --------------------------
 # High-resolution figures
 # --------------------------
 figures_tiff/*.tiff
+
 
 
 
