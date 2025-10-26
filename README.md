@@ -1,5 +1,26 @@
-# 🌍 OpenUrbanAirandMeteorological  
-### *Citizen Science and STEM Education with R: Teaching Innovation through Open Urban Climate Data*  
+---
+title: "Open Urban AirandMeteorological"
+subtitle: "Citizen Science and STEM Education with R: Teaching Innovation through Open Urban Climate Data"
+lang: en
+---
+
+<script>
+// Disable Article link if PDF missing
+document.addEventListener("DOMContentLoaded", function() {
+  fetch("article.pdf", { method: "HEAD" })
+    .then(response => {
+      if (!response.ok) {
+        const link = [...document.querySelectorAll("a")]
+                      .find(a => a.textContent.includes("Article"));
+        if(link) {
+          link.textContent = "📄 Article (coming soon)";
+          link.style.opacity = "0.6";
+          link.style.pointerEvents = "none";
+        }
+      }
+    }); 
+});
+</script> 
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Project DOI](https://img.shields.io/badge/DOI-coming_soon-blue.svg)](https://doi.org/)
@@ -65,11 +86,8 @@ OpenUrbanAirandMeteorological/
 ## 🧭 Educational Use
 
 This repository supports STEM education by providing:
-
 Hands-on examples for environmental informatics and sustainability courses
-
 Open-source reproducible R-Quarto workflow
-
 Didactic visualisations for citizen science and air quality literacy
 
 ## 📚 Citation
