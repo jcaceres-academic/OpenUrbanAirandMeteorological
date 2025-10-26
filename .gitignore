@@ -11,7 +11,7 @@
 # Quarto builds
 # --------------------------
 docs/_site/
-docs/*.html
+#docs/*.html
 docs/*_files/
 
 # -------------------------- 
