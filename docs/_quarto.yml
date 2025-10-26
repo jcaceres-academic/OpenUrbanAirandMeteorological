@@ -4,7 +4,7 @@ project:
 
 website:
   title: "Open Urban Air and Meteorological Data"
-  site-url: https://jcaceres-academic.github.io/OpenUrbanAirandMeteorological/
+  site-url: https://jcaceres-academic.github.io/OpenUrbanAirandMeteorological/index.html
   description: "Citizen Science and STEM Education with R"
   page-navigation: true
   search: false
