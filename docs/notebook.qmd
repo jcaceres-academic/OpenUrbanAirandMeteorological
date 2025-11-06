@@ -1,6 +1,23 @@
 ---
 title: "Educational Notebook"
+subtitle: "Citizen Science and STEM Education with R — AI–IoT Forecasting and Reproducible Learning from Open Urban Air Quality Data"
+author:
+  - name: "Jesús Cáceres Tello"
+    affiliation: "Universidad Complutense de Madrid"
+    email: "jcaceres.academic@gmail.com"
+  - name: "José Javier Galán Hernández"
+    affiliation: "Universidad Complutense de Madrid"
+date: "2025"
 lang: en
+bibliography: ../applsci-3979500.bib
+link-citations: true
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+    theme: cosmo
 ---
  
 
@@ -159,4 +176,13 @@ When citing this educational resource, please use:
 > DOI: [placeholder]
 
 This ensures traceability and recognition for open-source academic contributions.
+
+---
+
+# 📚 References
+
+All cited works are managed through the shared bibliographic file [`applsci-3979500.bib`](../applsci-3979500.bib), which includes all references used in the manuscript and notebook.  
+A public mirror of this bibliography is archived in the author’s Zotero collection:  
+➡️ [https://www.zotero.org/jcaceres_academic/collections/X6RW9UGU](https://www.zotero.org/jcaceres_academic/collections/X6RW9UGU)
+
 
