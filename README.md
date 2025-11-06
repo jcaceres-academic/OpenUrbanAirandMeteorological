@@ -1,6 +1,6 @@
 ---
 title: "Open Urban Air and Meteorological"
-subtitle: "Citizen Science and STEM Education with R: Teaching Innovation through Open Urban Climate Data"
+subtitle: "Citizen Science and STEM Education with R: AI–IoT Forecasting and Reproducible Learning from Open Urban Air Quality Data"
 lang: en
 ---
 
