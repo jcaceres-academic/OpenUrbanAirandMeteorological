@@ -6,7 +6,7 @@ lang: en
 
 ## 🌍 Introduction
 
-This notebook complements the article *Citizen Science and STEM Education with R: Teaching Innovation through Open Urban Climate Data*  
+This notebook complements the article *Citizen Science and STEM Education with R: AI–IoT Forecasting and Reproducible Learning from Open Urban Air Quality Data*  
 (Applied Sciences, 2025) and includes reproducible code examples, data harmonisation workflows, and visualisations.
 
 It reproduces the main analytical workflow implemented in the study and illustrates how R and Quarto can be integrated into **STEM education** to foster data literacy, environmental awareness, and methodological transparency.
