@@ -83,6 +83,20 @@ OpenUrbanAirandMeteorological/
 | **Forecasting** | `prophet` · `keras` · `tensorflow` · `torch` |
 | **Reproducibility** | `renv` · `knitr` · `rmarkdown` |
 
+## 📚 Bibliographic Resources
+
+The complete set of references cited in the article is available in the file  
+[`applsci-3979500.bib`](./applsci-3979500.bib).  
+It contains all bibliographic records used in the research and manuscript  
+*Citizen Science and STEM Education with R: AI–IoT Forecasting and Reproducible Learning from Open Urban Air Quality Data*  
+(*Applied Sciences*, MDPI, 2025).  
+
+This file follows the **Better BibTeX** format with active DOIs for interoperability  
+with Zotero, Quarto, and R Markdown workflows.
+
+A mirrored copy is also archived in the author’s Zotero collection for citation reproducibility:  
+➡️ [Zotero: applsci-3979500 Collection](https://www.zotero.org/jcaceres_academic/collections/X6RW9UGU)
+
 ## 🧭 Educational Use
 
 This repository supports STEM education by providing:
