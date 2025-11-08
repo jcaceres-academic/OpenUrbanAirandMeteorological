@@ -4,3 +4,4 @@ rmarkdown::render(
   output_file  = "index.html"
 )
 file.copy(file.path(tempdir(), "index.html"), "docs/index.html", overwrite = TRUE)
+
