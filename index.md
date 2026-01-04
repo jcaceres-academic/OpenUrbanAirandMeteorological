@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const link = [...document.querySelectorAll("a")]
                       .find(a => a.textContent.includes("Article"));
         if(link) {
-          link.textContent = "📄 Article (coming soon)";
+          link.textContent = "📄 Article (10.3390/app152212183)";
           link.style.opacity = "0.6";
           link.style.pointerEvents = "none";
         }
