@@ -155,17 +155,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#annual-and-seasonal-variability" id="toc-annual-and-seasonal-variability" class="nav-link" data-scroll-target="#annual-and-seasonal-variability"><span class="header-section-number">4.1</span> Annual and Seasonal Variability</a></li>
   <li><a href="#distribution-analysis" id="toc-distribution-analysis" class="nav-link" data-scroll-target="#distribution-analysis"><span class="header-section-number">4.2</span> Distribution Analysis</a></li>
-  <li><a href="#model-for-no₂" id="toc-model-for-no₂" class="nav-link" data-scroll-target="#model-for-no₂"><span class="header-section-number">4.3</span> Model for NO₂</a></li>
   </ul></li>
-  <li><a href="#meteorological-integration" id="toc-meteorological-integration" class="nav-link" data-scroll-target="#meteorological-integration"><span class="header-section-number">5</span> 🌦 Meteorological Integration</a>
+  <li><a href="#forecasting-with-prophet" id="toc-forecasting-with-prophet" class="nav-link" data-scroll-target="#forecasting-with-prophet"><span class="header-section-number">5</span> 🔮 Forecasting with Prophet</a>
   <ul class="collapse">
-  <li><a href="#integration-workflow" id="toc-integration-workflow" class="nav-link" data-scroll-target="#integration-workflow"><span class="header-section-number">5.1</span> Integration Workflow</a></li>
-  <li><a href="#correlation-analysis-between-pollutants-and-meteorological-variables" id="toc-correlation-analysis-between-pollutants-and-meteorological-variables" class="nav-link" data-scroll-target="#correlation-analysis-between-pollutants-and-meteorological-variables"><span class="header-section-number">5.2</span> Correlation Analysis between Pollutants and Meteorological Variables</a></li>
+  <li><a href="#model-for-no₂" id="toc-model-for-no₂" class="nav-link" data-scroll-target="#model-for-no₂"><span class="header-section-number">5.1</span> Model for NO₂</a></li>
   </ul></li>
-  <li><a href="#learning-and-reproducibility-framework" id="toc-learning-and-reproducibility-framework" class="nav-link" data-scroll-target="#learning-and-reproducibility-framework"><span class="header-section-number">6</span> 🎓 Learning and Reproducibility Framework</a></li>
-  <li><a href="#educational-applications" id="toc-educational-applications" class="nav-link" data-scroll-target="#educational-applications"><span class="header-section-number">7</span> 🧑‍🏫 Educational Applications</a></li>
-  <li><a href="#repository-and-citation" id="toc-repository-and-citation" class="nav-link" data-scroll-target="#repository-and-citation"><span class="header-section-number">8</span> 🌐 Repository and Citation</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">9</span> 📚 References</a></li>
+  <li><a href="#meteorological-integration" id="toc-meteorological-integration" class="nav-link" data-scroll-target="#meteorological-integration"><span class="header-section-number">6</span> 🌦 Meteorological Integration</a>
+  <ul class="collapse">
+  <li><a href="#integration-workflow" id="toc-integration-workflow" class="nav-link" data-scroll-target="#integration-workflow"><span class="header-section-number">6.1</span> Integration Workflow</a></li>
+  <li><a href="#correlation-analysis-between-pollutants-and-meteorological-variables" id="toc-correlation-analysis-between-pollutants-and-meteorological-variables" class="nav-link" data-scroll-target="#correlation-analysis-between-pollutants-and-meteorological-variables"><span class="header-section-number">6.2</span> Correlation Analysis between Pollutants and Meteorological Variables</a></li>
+  </ul></li>
+  <li><a href="#learning-and-reproducibility-framework" id="toc-learning-and-reproducibility-framework" class="nav-link" data-scroll-target="#learning-and-reproducibility-framework"><span class="header-section-number">7</span> 🎓 Learning and Reproducibility Framework</a></li>
+  <li><a href="#educational-applications" id="toc-educational-applications" class="nav-link" data-scroll-target="#educational-applications"><span class="header-section-number">8</span> 🧑‍🏫 Educational Applications</a></li>
+  <li><a href="#repository-and-citation" id="toc-repository-and-citation" class="nav-link" data-scroll-target="#repository-and-citation"><span class="header-section-number">9</span> 🌐 Repository and Citation</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">10</span> 📚 References</a></li>
   </ul>
 </nav>
 </nav>
@@ -333,12 +336,14 @@ In this context, students learn how descriptive statistics translate into enviro
 </div>
 </div>
 <hr>
-<p>#🔮 Forecasting with Prophet</p>
+</section>
+</section>
+<section id="forecasting-with-prophet" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 🔮 Forecasting with Prophet</h1>
 <p>Time-series forecasting introduces students to predictive modelling using open environmental data.<br>
 The <strong>Prophet model</strong> (Taylor &amp; Letham, 2018) was selected for its interpretability, decomposition structure, and robustness to missing values — key features for teaching reproducible forecasting in R.</p>
-</section>
-<section id="model-for-no₂" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="model-for-no₂"><span class="header-section-number">4.3</span> Model for NO₂</h2>
+<section id="model-for-no₂" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="model-for-no₂"><span class="header-section-number">5.1</span> Model for NO₂</h2>
 <p>Students can visualise how additive components — trend, seasonality, and residuals — reveal the influence of human activity and meteorological cycles on pollutant evolution. This exercise supports reproducible experimentation with forecasting horizons, cross-validation, and performance metrics such as RMSE or MAE.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -363,12 +368,12 @@ The <strong>Prophet model</strong> (Taylor &amp; Letham, 2018) was selected for 
 <hr>
 </section>
 </section>
-<section id="meteorological-integration" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 🌦 Meteorological Integration</h1>
+<section id="meteorological-integration" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 🌦 Meteorological Integration</h1>
 <p>Meteorological factors shape pollutant behaviour and are fundamental in understanding atmospheric processes.<br>
 By integrating temperature, solar radiation, and wind speed data from <strong>AEMET</strong>, learners can explore multivariate relationships within an urban ecosystem.</p>
-<section id="integration-workflow" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="integration-workflow"><span class="header-section-number">5.1</span> Integration Workflow</h2>
+<section id="integration-workflow" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="integration-workflow"><span class="header-section-number">6.1</span> Integration Workflow</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -380,8 +385,8 @@ By integrating temperature, solar radiation, and wind speed data from <strong>AE
 </div>
 </div>
 </section>
-<section id="correlation-analysis-between-pollutants-and-meteorological-variables" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="correlation-analysis-between-pollutants-and-meteorological-variables"><span class="header-section-number">5.2</span> Correlation Analysis between Pollutants and Meteorological Variables</h2>
+<section id="correlation-analysis-between-pollutants-and-meteorological-variables" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="correlation-analysis-between-pollutants-and-meteorological-variables"><span class="header-section-number">6.2</span> Correlation Analysis between Pollutants and Meteorological Variables</h2>
 <p>To complement the integration workflow, this section computes the <strong>Spearman correlations</strong> between daily concentrations of NO₂ and O₃ and six meteorological parameters (temperature, relative humidity, wind speed, solar radiation, atmospheric pressure, and precipitation) using the validated datasets (2020–2024).</p>
 <div class="cell">
 <details class="code-fold">
@@ -513,8 +518,8 @@ By integrating temperature, solar radiation, and wind speed data from <strong>AE
 <hr>
 </section>
 </section>
-<section id="learning-and-reproducibility-framework" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> 🎓 Learning and Reproducibility Framework</h1>
+<section id="learning-and-reproducibility-framework" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> 🎓 Learning and Reproducibility Framework</h1>
 <p>Reproducibility is both a scientific and pedagogical value.<br>
 This framework unifies open data, transparent computation, and educational innovation, reinforcing the culture of <strong>open science</strong>.</p>
 <div class="cell" data-layout-align="center">
@@ -529,8 +534,8 @@ This framework unifies open data, transparent computation, and educational innov
 </div>
 <hr>
 </section>
-<section id="educational-applications" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> 🧑‍🏫 Educational Applications</h1>
+<section id="educational-applications" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> 🧑‍🏫 Educational Applications</h1>
 <p>This Notebook can be directly incorporated into undergraduate or postgraduate STEM courses focused on data analysis, environmental informatics, or sustainability.</p>
 <p><strong>Suggested learning activities:</strong> 1. Reproduce pollutant forecasts with modified training periods.<br>
 2. Explore correlations between additional meteorological variables.<br>
@@ -539,8 +544,8 @@ This framework unifies open data, transparent computation, and educational innov
 <p>Through these exercises, students not only practise coding but also embrace scientific integrity and civic engagement through data.</p>
 <hr>
 </section>
-<section id="repository-and-citation" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> 🌐 Repository and Citation</h1>
+<section id="repository-and-citation" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> 🌐 Repository and Citation</h1>
 <p>All code, figures, and harmonised datasets are openly available at:<br>
 <a href="https://github.com/jcaceres-academic/OpenUrbanAirandMeteorological" class="uri">https://github.com/jcaceres-academic/OpenUrbanAirandMeteorological</a></p>
 <p>When citing this educational resource, please use:</p>
@@ -550,8 +555,8 @@ This framework unifies open data, transparent computation, and educational innov
 <p>This ensures traceability and recognition for open-source academic contributions.</p>
 <hr>
 </section>
-<section id="references" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> 📚 References</h1>
+<section id="references" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> 📚 References</h1>
 <p>All cited works are managed through the shared bibliographic file <a href="../applsci-3979500.bib"><code>applsci-3979500.bib</code></a>, which includes all references used in the manuscript and notebook.<br>
 A public mirror of this bibliography is archived in the author’s Zotero collection:<br>
 ➡️ <a href="https://www.zotero.org/jcaceres_academic/collections/X6RW9UGU" class="uri">https://www.zotero.org/jcaceres_academic/collections/X6RW9UGU</a></p>
