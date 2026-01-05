@@ -20,6 +20,11 @@ DOI: https://doi.org/10.3390/app152212183
 - `scripts/` – Reproducible analysis scripts
 - `figures_tiff/` – High-resolution figures for publication
 
+## 🔁 Research principles
+
+This project is developed under principles of **reproducibility**, **transparency**, and **methodological rigour**, with all results generated programmatically from openly documented data and scripts.
+
+
 ## 📜 License
 
 Creative Commons Attribution 4.0 (CC BY 4.0)
