@@ -20,7 +20,7 @@ format:
     theme: cosmo
 ---
 
-## 🌍 Introduction
+# 🌍 Introduction
 
 This notebook complements the article *Citizen Science and STEM Education with R: AI–IoT Forecasting and Reproducible Learning from Open Urban Air Quality Data*\
 (Applied Sciences, 2025) and includes reproducible code examples, data harmonisation workflows, and visualisations.
@@ -135,9 +135,7 @@ knitr::include_graphics("images/Fig7_Meteorological_Data_Integration_Workflow_20
 
 To complement the integration workflow, this section computes the **Spearman correlations** between daily concentrations of NO₂ and O₃ and six meteorological parameters (temperature, relative humidity, wind speed, solar radiation, atmospheric pressure, and precipitation) using the validated datasets (2020–2024).
 
-```{r correlation-table, echo=TRUE, message=FALSE, warning=FALSE}
-## Correlation Analysis between Pollutants and Meteorological Variables
-
+```{r correlation-table, message=FALSE, warning=FALSE}
 library(arrow)
 library(dplyr)
 library(tidyr)
@@ -147,22 +145,29 @@ library(purrr)
 library(lubridate)
 
 # --- 1. Cargar y combinar archivos anuales ---
-air_files <- list.files("data/Calidad del Aire_Parquet",
-                        pattern = "aire_validados_.*\\.parquet$", full.names = TRUE)
-met_files <- list.files("data/Meteorologia_Parquet",
-                        pattern = "meteo_validados_.*\\.parquet$", full.names = TRUE)
+air_files <- list.files(
+  "data/Calidad del Aire_Parquet",
+  pattern = "aire_validados_.*\\.parquet$",
+  full.names = TRUE
+)
+
+met_files <- list.files(
+  "data/Meteorologia_Parquet",
+  pattern = "meteo_validados_.*\\.parquet$",
+  full.names = TRUE
+)
 
 air <- map_dfr(air_files, read_parquet)
 met <- map_dfr(met_files, read_parquet)
 
-# --- 2. Crear variable diaria (solo la fecha, sin hora) ---
+# --- 2. Crear variable diaria ---
 air <- air %>%
-  mutate(date = as.Date(FECHA_HORA))  # si ya es Date, simplemente duplica la columna
+  mutate(date = as.Date(FECHA_HORA))
 
 met <- met %>%
   mutate(date = as.Date(FECHA_HORA))
 
-# --- 3. Pivotar ambos datasets (formato largo → ancho) ---
+# --- 3. Agregar diariamente y pivotar a formato ancho ---
 air_wide <- air %>%
   mutate(MAGNITUD = as.character(MAGNITUD)) %>%
   group_by(date, MAGNITUD) %>%
@@ -178,32 +183,42 @@ met_wide <- met %>%
 # --- 4. Unir por fecha ---
 data_joined <- inner_join(air_wide, met_wide, by = "date")
 
-# --- 5. Renombrar magnitudes según códigos del Ayuntamiento de Madrid ---
+# --- 5. Renombrar magnitudes (solo las que existen) ---
 data_joined <- data_joined %>%
-  rename(
-    NO2 = `8`,
-    O3 = `14`,
-    WS = `81`,
-    T = `83`,
-    PRES = `85`,
-    RH = `86`,
-    SR = `87`,
-    PREC = `89`
+  rename_with(
+    ~ recode(
+      .x,
+      `8`  = "NO2",
+      `14` = "O3",
+      `81` = "WS",
+      `83` = "T",
+      `85` = "PRES",
+      `86` = "RH",
+      `87` = "SR",
+      `89` = "PREC"
+    ),
+    .cols = intersect(
+      names(data_joined),
+      c("8", "14", "81", "83", "85", "86", "87", "89")
+    )
   )
 
-# --- 6. Calcular correlaciones de Spearman ---
+# --- 6. Calcular correlaciones de Spearman (robusto) ---
+vars <- c("NO2", "O3", "T", "RH", "WS", "SR", "PRES", "PREC")
+
 cor_matrix <- data_joined %>%
-  select(NO2, O3, T, RH, WS, SR, PRES, PREC) %>%
+  select(any_of(vars)) %>%
   correlate(method = "spearman") %>%
-  focus(NO2, O3) %>%
+  focus(any_of(c("NO2", "O3"))) %>%
   arrange(term)
 
 # --- 7. Mostrar tabla formateada ---
-kable(round(cor_matrix, 2),
-      caption = "Table 4. Spearman correlation coefficients (ρ) between daily pollutant concentrations and meteorological variables (2020–2024).",
-      col.names = c("Variable", "NO₂", "O₃"))
-
-
+kable(
+  cor_matrix %>%
+    mutate(across(where(is.numeric), ~ round(.x, 2))),
+  caption = "Table 4. Spearman correlation coefficients (ρ) between daily pollutant concentrations and meteorological variables (2020–2024).",
+  col.names = c("Variable", "NO₂", "O₃")
+)
 ```
 
 ------------------------------------------------------------------------
@@ -239,8 +254,7 @@ All code, figures, and harmonised datasets are openly available at:\
 
 When citing this educational resource, please use:
 
-> Cáceres-Tello, J.; Galán-Hernández, J.J. (2025). *Citizen Science and STEM Education with R: Reproducible Learning from Open Urban Air Quality Data.* *Applied Sciences*, 15(x), xxxx.\
-> DOI: \[placeholder\]
+> Cáceres-Tello, J., Galán-Hernández, J. J., Morales Cevallo, M. B., & López-Meneses, E. (2025). Citizen Science and STEM Education with R: AI–IoT Forecasting and Reproducible Learning from Open Urban Air Quality >Data. Applied Sciences, 15(22), 12183. https://doi.org/10.3390/app152212183
 
 This ensures traceability and recognition for open-source academic contributions.
 

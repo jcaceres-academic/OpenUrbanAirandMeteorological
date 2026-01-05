@@ -1,1 +1,1 @@
-Sitemap: https://jcaceres-academic.github.io/OpenUrbanAirandMeteorological/sitemap.xml
+Sitemap: https://jcaceres-academic.github.io/OpenUrbanAirandMeteorological/index.html/sitemap.xml

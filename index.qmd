@@ -51,13 +51,18 @@ Rendered notebook:
 ```text
 OpenUrbanAirandMeteorological/
 ├── docs/                      # Quarto notebook and rendered HTML
-│   ├── OpenUrbanAir_and_Meteorological_Workflow.qmd
-│   ├── OpenUrbanAir_and_Meteorological_Workflow.html
-│   └── images/                # PNG figures used in the notebook
+│   ├── index.html
+│   ├── notebook.html
+│   └── OpenUrbanAir_and_Meteorological_Workflow.html
+├── images/                    # PNG figures used in the notebook
 ├── figures_tiff/              # High-resolution TIFF figures for publication
 ├── scripts/                   # R scripts for preprocessing and analysis
+├── index.qmd
+├── notebook.qmd
+├── OpenUrbanAir_and_Meteorological_Workflow.qmd
 ├── .gitignore
 ├── LICENSE
+├── _quarto.yml
 ├── datos.Rproj
 └── README.md
 ``` 
