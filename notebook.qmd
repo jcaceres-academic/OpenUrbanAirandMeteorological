@@ -77,14 +77,15 @@ knitr::include_graphics("images/Fig3_Data_Pipeline.png")
 
 # 📊 Exploratory Analysis
 
-Exploratory analysis introduces students to descriptive statistics and visual analytics in R using open environmental data.\
-The focus is on **NO₂** (a primary traffic-related pollutant) and **O₃** (a secondary pollutant formed photochemically), both key indicators of urban air quality dynamics.
+This section presents an exploratory analysis of key urban air pollutants using open environmental data. The aim is to characterise the temporal variability and distributional properties of NO₂ and O₃ as a basis for subsequent modelling and correlation analyses. Exploratory statistics are used to identify long-term trends, seasonal patterns, and interannual variability relevant for urban air quality dynamics.
 
-```{r fig4a-variability, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 4. Annual variability of NO₂ and O₃ concentrations (2020–2024).'}
-knitr::include_graphics("images/Fig4_NO2_O3_Annual_Variability.png")
-```
 
 ## Annual and Seasonal Variability
+
+Figure 4 shows the annual variability of daily mean  **NO₂** and **O₃** concentrations over the 2020–2024 period. NO₂ concentrations display relatively stable distributions with a slight reduction in median values in the most recent years. In contrast, O₃ exhibits higher dispersion and a progressive increase in median and upper-range concentrations, reflecting its pronounced seasonal behaviour.
+
+Overall, the boxplots highlight distinct distributional patterns between the primary pollutant (**NO₂**) and the secondary pollutant (**O₃**), providing a descriptive baseline for the subsequent correlation and modelling analyses.
+
 
 ```{r fig4-variability, echo=FALSE, fig.align='center', out.width='90%', fig.cap='Fig. 4. Annual variability of NO₂ and O₃ concentrations (2020–2024).'}
 knitr::include_graphics("images/Fig4_NO2_O3_Annual_Variability.png")

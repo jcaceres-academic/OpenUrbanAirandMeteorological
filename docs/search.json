@@ -102,7 +102,7 @@
     "href": "notebook.html#annual-and-seasonal-variability",
     "title": "Educational Notebook",
     "section": "4.1 Annual and Seasonal Variability",
-    "text": "4.1 Annual and Seasonal Variability\n\n\n\n\n\nFig. 4. Annual variability of NO₂ and O₃ concentrations (2020–2024)."
+    "text": "4.1 Annual and Seasonal Variability\nFigure 4 shows the annual variability of daily mean NO₂ and O₃ concentrations over the 2020–2024 period. NO₂ concentrations display relatively stable distributions with a slight reduction in median values in the most recent years. In contrast, O₃ exhibits higher dispersion and a progressive increase in median and upper-range concentrations, reflecting its pronounced seasonal behaviour.\nOverall, the boxplots highlight distinct distributional patterns between the primary pollutant (NO₂) and the secondary pollutant (O₃), providing a descriptive baseline for the subsequent correlation and modelling analyses.\n\n\n\n\n\nFig. 4. Annual variability of NO₂ and O₃ concentrations (2020–2024)."
   },
   {
     "objectID": "notebook.html#distribution-analysis",
