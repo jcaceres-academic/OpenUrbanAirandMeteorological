@@ -4,6 +4,16 @@ project:
 
 website:
   title: "Open Urban Air and Meteorological"
+  navbar:
+    right:
+      - text: "Home"
+        href: index.html
+      - text: "Article"
+        href: "#"
+      - text: "Notebook"
+        href: notebook.html
+      - icon: github
+        href: https://github.com/jcaceres-academic/OpenUrbanAirandMeteorological
 
 format:
   html:
