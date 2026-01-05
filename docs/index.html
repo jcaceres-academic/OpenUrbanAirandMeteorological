@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Open Urban Air and Meteorological – Open Urban Air and Meteorological Data</title>
+<title>Open Urban Air and Meteorological</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,6 +25,10 @@ ul.task-list li input[type="checkbox"] {
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -35,6 +39,18 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -49,63 +65,22 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="floating nav-fixed">
+<body>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Open Urban Air and Meteorological Data</span>
-    </a>
-  </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="https://jcaceres-academic.github.io/" target="_self"> <i class="bi bi-house" role="img">
-</i> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./article.pdf" target="_blank"> <i class="bi bi-file-earmark-text" role="img">
-</i> 
-<span class="menu-text">Article</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./notebook.html" target="_self"> <i class="bi bi-laptop" role="img">
-</i> 
-<span class="menu-text">Notebook</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://github.com/jcaceres-academic/OpenUrbanAirandMeteorological" target="_blank"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text">GitHub</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul class="collapse">
+  <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">🧠 Overview</a></li>
   <li><a href="#reproducible-workflow" id="toc-reproducible-workflow" class="nav-link" data-scroll-target="#reproducible-workflow">🧩 Reproducible Workflow</a></li>
   <li><a href="#repository-structure" id="toc-repository-structure" class="nav-link" data-scroll-target="#repository-structure">🗂️ Repository Structure</a></li>
@@ -117,10 +92,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">📬 Contact</a></li>
   </ul>
 </nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -145,33 +116,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<script>
-// Disable Article link if PDF missing
-document.addEventListener("DOMContentLoaded", function() {
-  fetch("article.pdf", { method: "HEAD" })
-    .then(response => {
-      if (!response.ok) {
-        const link = [...document.querySelectorAll("a")]
-                      .find(a => a.textContent.includes("Article"));
-        if(link) {
-          link.textContent = "📄 Article (10.3390/app152212183)";
-          link.style.opacity = "0.6";
-          link.style.pointerEvents = "none";
-        }
-      }
-    }); 
-});
-</script>
-<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" class="img-fluid" alt="License: CC BY 4.0"></a> <a href="https://doi.org/"><img src="https://img.shields.io/badge/DOI-coming_soon-blue.svg" class="img-fluid" alt="Project DOI"></a> <a href="https://www.r-project.org/"><img src="https://img.shields.io/badge/Made%20with-R-blue.svg" class="img-fluid" alt="Made with R"></a> <a href="https://quarto.org/"><img src="https://img.shields.io/badge/Rendered_with-Quarto-4A90E2.svg" class="img-fluid" alt="Quarto Document"></a> <a href="https://jcaceres-academico.github.io/OpenUrbanAirandMeteorological/"><img src="https://img.shields.io/badge/Website-online-brightgreen.svg" class="img-fluid" alt="GitHub Pages"></a></p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" class="img-fluid" alt="License: CC BY 4.0"></a> <a href="https://doi.org/10.3390/app152212183"><img src="https://img.shields.io/badge/DOI-10.3390%2Fapp152212183-blue.svg" class="img-fluid" alt="DOI"></a> <a href="https://www.r-project.org/"><img src="https://img.shields.io/badge/Made%20with-R-blue.svg" class="img-fluid" alt="Made with R"></a> <a href="https://quarto.org/"><img src="https://img.shields.io/badge/Rendered_with-Quarto-4A90E2.svg" class="img-fluid" alt="Quarto Document"></a> <a href="https://jcaceres-academico.github.io/OpenUrbanAirandMeteorological/"><img src="https://img.shields.io/badge/Website-online-brightgreen.svg" class="img-fluid" alt="GitHub Pages"></a></p>
 <hr>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">🧠 Overview</h2>
 <p>This repository hosts the open, reproducible materials developed for the article submitted to <em>Applied Sciences (MDPI, 2025)</em>:</p>
-<blockquote class="blockquote">
-<p><strong>Cáceres-Tello, J.</strong> &amp; <strong>Galán-Hernández, J.J.</strong> (2025).<br>
+<p>📄 <strong>Article</strong><br>
+Cáceres-Tello, J. &amp; Galán-Hernández, J.J. (2025).<br>
 <em>Citizen Science and STEM Education with R: Teaching Innovation through Open Urban Climate Data.</em><br>
-<em>Applied Sciences</em> (MDPI).</p>
-</blockquote>
+<strong>Applied Sciences (MDPI)</strong>.<br>
+DOI: <a href="https://doi.org/10.3390/app152212183">10.3390/app152212183</a></p>
 <p>The project demonstrates how <strong>R, Quarto, and open environmental datasets</strong> can be integrated to support <strong>STEM education, citizen science, and methodological transparency</strong>.</p>
 <hr>
 </section>
@@ -375,7 +329,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/jcaceres-academic\.github\.io\/OpenUrbanAirandMeteorological\/index\.html");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -708,5 +662,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

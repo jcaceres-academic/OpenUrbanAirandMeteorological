@@ -23,46 +23,30 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="index_files/libs/clipboard/clipboard.min.js"></script>
-<script src="index_files/libs/quarto-html/quarto.js"></script>
-<script src="index_files/libs/quarto-html/popper.min.js"></script>
-<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="index_files/libs/quarto-html/anchor.min.js"></script>
-<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="README_files/libs/clipboard/clipboard.min.js"></script>
+<script src="README_files/libs/quarto-html/quarto.js"></script>
+<script src="README_files/libs/quarto-html/popper.min.js"></script>
+<script src="README_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="README_files/libs/quarto-html/anchor.min.js"></script>
+<link href="README_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="README_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="README_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="README_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="README_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
 
-<body>
+<body class="fullcontent">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-  <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">🧠 Overview</a></li>
-  <li><a href="#reproducible-workflow" id="toc-reproducible-workflow" class="nav-link" data-scroll-target="#reproducible-workflow">🧩 Reproducible Workflow</a></li>
-  <li><a href="#repository-structure" id="toc-repository-structure" class="nav-link" data-scroll-target="#repository-structure">🗂️ Repository Structure</a></li>
-  <li><a href="#technologies-used" id="toc-technologies-used" class="nav-link" data-scroll-target="#technologies-used">⚙️ Technologies Used</a></li>
-  <li><a href="#bibliographic-resources" id="toc-bibliographic-resources" class="nav-link" data-scroll-target="#bibliographic-resources">📚 Bibliographic Resources</a></li>
-  <li><a href="#educational-use" id="toc-educational-use" class="nav-link" data-scroll-target="#educational-use">🧭 Educational Use</a></li>
-  <li><a href="#citation" id="toc-citation" class="nav-link" data-scroll-target="#citation">📚 Citation</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">⚖️ License</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">📬 Contact</a></li>
-  </ul>
-</nav>
-</div>
+
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Open Urban Air and Meteorological</h1>
-<p class="subtitle lead">Citizen Science and STEM Education with R: Teaching Innovation through Open Urban Climate Data</p>
+<p class="subtitle lead">Citizen Science and STEM Education with R: AI–IoT Forecasting and Reproducible Learning from Open Urban Air Quality Data</p>
 </div>
 
 
@@ -79,16 +63,33 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" class="img-fluid" alt="License: CC BY 4.0"></a> <a href="https://doi.org/10.3390/app152212183"><img src="https://img.shields.io/badge/DOI-10.3390%2Fapp152212183-blue.svg" class="img-fluid" alt="DOI"></a> <a href="https://www.r-project.org/"><img src="https://img.shields.io/badge/Made%20with-R-blue.svg" class="img-fluid" alt="Made with R"></a> <a href="https://quarto.org/"><img src="https://img.shields.io/badge/Rendered_with-Quarto-4A90E2.svg" class="img-fluid" alt="Quarto Document"></a> <a href="https://jcaceres-academico.github.io/OpenUrbanAirandMeteorological/"><img src="https://img.shields.io/badge/Website-online-brightgreen.svg" class="img-fluid" alt="GitHub Pages"></a></p>
+<script>
+// Disable Article link if PDF missing
+document.addEventListener("DOMContentLoaded", function() {
+  fetch("article.pdf", { method: "HEAD" })
+    .then(response => {
+      if (!response.ok) {
+        const link = [...document.querySelectorAll("a")]
+                      .find(a => a.textContent.includes("Article"));
+        if(link) {
+          link.textContent = "📄 Article (coming soon)";
+          link.style.opacity = "0.6";
+          link.style.pointerEvents = "none";
+        }
+      }
+    }); 
+});
+</script>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" class="img-fluid" alt="License: CC BY 4.0"></a> <a href="https://doi.org/"><img src="https://img.shields.io/badge/DOI-coming_soon-blue.svg" class="img-fluid" alt="Project DOI"></a> <a href="https://www.r-project.org/"><img src="https://img.shields.io/badge/Made%20with-R-blue.svg" class="img-fluid" alt="Made with R"></a> <a href="https://quarto.org/"><img src="https://img.shields.io/badge/Rendered_with-Quarto-4A90E2.svg" class="img-fluid" alt="Quarto Document"></a> <a href="https://jcaceres-academico.github.io/OpenUrbanAirandMeteorological/"><img src="https://img.shields.io/badge/Website-online-brightgreen.svg" class="img-fluid" alt="GitHub Pages"></a></p>
 <hr>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">🧠 Overview</h2>
 <p>This repository hosts the open, reproducible materials developed for the article submitted to <em>Applied Sciences (MDPI, 2025)</em>:</p>
-<p>📄 <strong>Article</strong><br>
-Cáceres-Tello, J. &amp; Galán-Hernández, J.J. (2025).<br>
+<blockquote class="blockquote">
+<p><strong>Cáceres-Tello, J.</strong> &amp; <strong>Galán-Hernández, J.J.</strong> (2025).<br>
 <em>Citizen Science and STEM Education with R: Teaching Innovation through Open Urban Climate Data.</em><br>
-<strong>Applied Sciences (MDPI)</strong>.<br>
-DOI: <a href="https://doi.org/10.3390/app152212183">10.3390/app152212183</a></p>
+<em>Applied Sciences</em> (MDPI).</p>
+</blockquote>
 <p>The project demonstrates how <strong>R, Quarto, and open environmental datasets</strong> can be integrated to support <strong>STEM education, citizen science, and methodological transparency</strong>.</p>
 <hr>
 </section>

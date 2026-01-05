@@ -1,0 +1,11 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Open Urban Air and Meteorological"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
