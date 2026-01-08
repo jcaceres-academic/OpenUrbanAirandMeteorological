@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "OpenUrbanAirandMeteorological",
+    "title": "Open Urban Air and Meteorological",
     "section": "",
-    "text": "This repository hosts the open, reproducible materials developed for the article submitted to Applied Sciences (MDPI, 2025):\n\nCáceres-Tello, J. & Galán-Hernández, J.J. (2025).\nCitizen Science and STEM Education with R: Teaching Innovation through Open Urban Climate Data.\nApplied Sciences (MDPI).\n\nThe project demonstrates how R, Quarto, and open environmental datasets can be integrated to support STEM education, citizen science, and methodological transparency.\n\n\n\n\nThe workflow follows a complete educational and research pipeline:\n\nOpen data acquisition → Madrid air quality & meteorological datasets (2020–2024)\n\nPreprocessing and harmonisation → validation, Parquet conversion, and reproducibility scripts\n\nExploratory analysis → pollutant variability and inter-station correlations\n\nForecasting models → Prophet–LSTM hybrid approach\n\nEducational visualisation → Quarto Notebook for classroom integration\n\nRendered notebook:\n👉 OpenUrbanAir_and_Meteorological_Workflow.html\n\n\n\n\nOpenUrbanAirandMeteorological/\n├── docs/                      # Quarto notebook and rendered HTML\n│   ├── OpenUrbanAir_and_Meteorological_Workflow.qmd\n│   ├── OpenUrbanAir_and_Meteorological_Workflow.html\n│   └── images/                # PNG figures used in the notebook\n├── figures_tiff/              # High-resolution TIFF figures for publication\n├── scripts/                   # R scripts for preprocessing and analysis\n├── .gitignore\n├── LICENSE\n├── datos.Rproj\n└── README.md\n\n\n\n\n\n\nCategory\nTools / Packages\n\n\n\n\nProgramming\nR 4.4 + · Quarto\n\n\nData Handling\ntidyverse · arrow · lubridate\n\n\nVisualisation\nggplot2 · patchwork · leaflet · cowplot\n\n\nForecasting\nprophet · keras · tensorflow · torch\n\n\nReproducibility\nrenv · knitr · rmarkdown\n\n\n\n\n\n\nThis repository supports STEM education by providing: Hands-on examples for environmental informatics and sustainability courses Open-source reproducible R-Quarto workflow Didactic visualisations for citizen science and air quality literacy\n\n\n\nIf you reuse or adapt this resource, please cite as:\n\nCáceres-Tello, J., & Galán-Hernández, J. J. (2025).\nOpenUrbanAirandMeteorological: Citizen Science and STEM Education with R — Teaching Innovation through Open Urban Climate Data.\nApplied Sciences (MDPI).\nAvailable at https://jcaceres-academic.github.io/OpenUrbanAirandMeteorological\n\n\n\n\nCode and notebooks: Creative Commons Attribution 4.0 (CC BY 4.0)\nData (if reused): CC0 1.0 Public Domain Dedication\n\n\n\nJesús Cáceres Tello Department of Computer Systems and Computing Universidad Complutense de Madrid\n📧 jcaceres.academic@gmail.com\n📧 jescacer@ucm.es\n⬅️ Back to my main page\nThis repository supports open, transparent, and reproducible research in environmental data science and STEM education."
+    "text": "&lt;a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\"&gt;\n  &lt;img src=\"https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg\" alt=\"License CC BY 4.0\"&gt;\n&lt;/a&gt;\n&lt;a href=\"https://www.r-project.org/\" target=\"_blank\" rel=\"noopener\"&gt;\n  &lt;img src=\"https://img.shields.io/badge/Made%20with-R-blue.svg\" alt=\"Made with R\"&gt;\n&lt;/a&gt;\n&lt;a href=\"https://quarto.org/\" target=\"_blank\" rel=\"noopener\"&gt;\n  &lt;img src=\"https://img.shields.io/badge/Rendered_with-Quarto-4A90E2.svg\" alt=\"Rendered with Quarto\"&gt;\n&lt;/a&gt;\n&lt;a href=\"https://doi.org/10.3390/app152212183\" target=\"_blank\" rel=\"noopener\"&gt;\n  &lt;img src=\"https://img.shields.io/badge/DOI-10.3390%2Fapp152212183-blue.svg\" alt=\"DOI 10.3390/app152212183\"&gt;\n&lt;/a&gt;\n&lt;a href=\"https://www.zotero.org/groups/6375403/appliedsciences-2025\" target=\"_blank\" rel=\"noopener\"&gt;\n  &lt;img src=\"https://img.shields.io/badge/Zotero-Applied%20Sciences--2025-red.svg\" alt=\"Zotero Applied Sciences 2025\"&gt;\n&lt;/a&gt;"
   },
   {
     "objectID": "index.html#overview",
@@ -67,7 +67,7 @@
     "href": "notebook.html",
     "title": "Educational Notebook",
     "section": "",
-    "text": "This notebook complements the article Citizen Science and STEM Education with R: AI–IoT Forecasting and Reproducible Learning from Open Urban Air Quality Data\n(Applied Sciences, 2025) and includes reproducible code examples, data harmonisation workflows, and visualisations.\nIt reproduces the main analytical workflow implemented in the study and illustrates how R and Quarto can be integrated into STEM education to foster data literacy, environmental awareness, and methodological transparency."
+    "text": "Code\n&lt;a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\"&gt;\n  &lt;img src=\"https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg\" alt=\"License CC BY 4.0\"&gt;\n&lt;/a&gt;\n&lt;a href=\"https://www.r-project.org/\" target=\"_blank\" rel=\"noopener\"&gt;\n  &lt;img src=\"https://img.shields.io/badge/Made%20with-R-blue.svg\" alt=\"Made with R\"&gt;\n&lt;/a&gt;\n&lt;a href=\"https://quarto.org/\" target=\"_blank\" rel=\"noopener\"&gt;\n  &lt;img src=\"https://img.shields.io/badge/Rendered_with-Quarto-4A90E2.svg\" alt=\"Rendered with Quarto\"&gt;\n&lt;/a&gt;\n&lt;a href=\"https://doi.org/10.3390/app152212183\" target=\"_blank\" rel=\"noopener\"&gt;\n  &lt;img src=\"https://img.shields.io/badge/DOI-10.3390%2Fapp152212183-blue.svg\" alt=\"DOI 10.3390/app152212183\"&gt;\n&lt;/a&gt;\n&lt;a href=\"https://www.zotero.org/groups/6375403/appliedsciences-2025\" target=\"_blank\" rel=\"noopener\"&gt;\n  &lt;img src=\"https://img.shields.io/badge/Zotero-Applied%20Sciences--2025-red.svg\" alt=\"Zotero Applied Sciences 2025\"&gt;\n&lt;/a&gt;"
   },
   {
     "objectID": "notebook.html#introduction",
@@ -164,57 +164,57 @@
     "objectID": "notebook.knit.html#air-quality-data",
     "href": "notebook.knit.html#air-quality-data",
     "title": "Educational Notebook",
-    "section": "2.1 Air Quality Data",
-    "text": "2.1 Air Quality Data\nAir quality datasets were retrieved from the Madrid Open Data Portal (Portal de Datos Abiertos del Ayuntamiento de Madrid).\nMeasurements include nitrogen dioxide (NO₂), ozone (O₃), particulate matter (PM₁₀, PM₂.₅), sulphur dioxide (SO₂), and carbon monoxide (CO) recorded hourly across 24 urban stations (2020–2024).\n\n\n\n\n\nFig. 2a. Air quality monitoring stations across the Madrid urban area (2020–2024)."
+    "section": "3.1 Air Quality Data",
+    "text": "3.1 Air Quality Data\nAir quality datasets were retrieved from the Madrid Open Data Portal (Portal de Datos Abiertos del Ayuntamiento de Madrid).\nMeasurements include nitrogen dioxide (NO₂), ozone (O₃), particulate matter (PM₁₀, PM₂.₅), sulphur dioxide (SO₂), and carbon monoxide (CO) recorded hourly across 24 urban stations (2020–2024).\n\n\n\n\n\nFig. 2a. Air quality monitoring stations across the Madrid urban area (2020–2024)."
   },
   {
     "objectID": "notebook.knit.html#pollutant-coverage",
     "href": "notebook.knit.html#pollutant-coverage",
     "title": "Educational Notebook",
-    "section": "2.2 Pollutant Coverage",
-    "text": "2.2 Pollutant Coverage\nEach station has different pollutant coverage and measurement frequency, which provides an excellent example for students to explore data completeness and measurement uncertainty in open environmental datasets.\n\n\n\n\n\nFig. 2b. Pollutant coverage and measurement frequency across monitoring stations."
+    "section": "3.2 Pollutant Coverage",
+    "text": "3.2 Pollutant Coverage\nEach station has different pollutant coverage and measurement frequency, which provides an excellent example for students to explore data completeness and measurement uncertainty in open environmental datasets.\n\n\n\n\n\nFig. 2b. Pollutant coverage and measurement frequency across monitoring stations."
   },
   {
     "objectID": "notebook.knit.html#data-processing-workflow",
     "href": "notebook.knit.html#data-processing-workflow",
     "title": "Educational Notebook",
-    "section": "2.3 Data Processing Workflow",
-    "text": "2.3 Data Processing Workflow\nData from both sources were processed in R through three main stages:\n\nReading and cleaning monthly CSVs (removing redundant columns and correcting data types).\n\nValidating records with confirmed measurements (VAL flag).\n\nPivoting and compressing results into parquet format for efficiency and consistency.\n\n\n\n\n\n\nFig. 3. Data acquisition, validation, and harmonisation workflow implemented in R."
+    "section": "3.3 Data Processing Workflow",
+    "text": "3.3 Data Processing Workflow\nData from both sources were processed in R through three main stages:\n\nReading and cleaning monthly CSVs (removing redundant columns and correcting data types).\n\nValidating records with confirmed measurements (VAL flag).\n\nPivoting and compressing results into parquet format for efficiency and consistency.\n\n\n\n\n\n\nFig. 3. Data acquisition, validation, and harmonisation workflow implemented in R."
   },
   {
     "objectID": "notebook.knit.html#annual-and-seasonal-variability",
     "href": "notebook.knit.html#annual-and-seasonal-variability",
     "title": "Educational Notebook",
-    "section": "3.1 Annual and Seasonal Variability",
-    "text": "3.1 Annual and Seasonal Variability\n\n\n\n\n\nFig. 4. Annual variability of NO₂ and O₃ concentrations (2020–2024)."
+    "section": "4.1 Annual and Seasonal Variability",
+    "text": "4.1 Annual and Seasonal Variability\nFigure 4 shows the annual variability of daily mean NO₂ and O₃ concentrations over the 2020–2024 period. NO₂ concentrations display relatively stable distributions with a slight reduction in median values in the most recent years. In contrast, O₃ exhibits higher dispersion and a progressive increase in median and upper-range concentrations, reflecting its pronounced seasonal behaviour.\nOverall, the boxplots highlight distinct distributional patterns between the primary pollutant (NO₂) and the secondary pollutant (O₃), providing a descriptive baseline for the subsequent correlation and modelling analyses.\n\n\n\n\n\nFig. 4. Annual variability of NO₂ and O₃ concentrations (2020–2024)."
   },
   {
     "objectID": "notebook.knit.html#distribution-analysis",
     "href": "notebook.knit.html#distribution-analysis",
     "title": "Educational Notebook",
-    "section": "3.2 Distribution Analysis",
-    "text": "3.2 Distribution Analysis\nBoxplots provide a powerful visual tool to discuss dispersion, central tendency, and outliers across pollutants.\nIn this context, students learn how descriptive statistics translate into environmental interpretation, reinforcing quantitative reasoning with real data.\n\n\n\n\n\nFig. 8. Boxplots of NO₂ and O₃ concentrations across 2020–2024.\n\n\n\n\n\n#🔮 Forecasting with Prophet\nTime-series forecasting introduces students to predictive modelling using open environmental data.\nThe Prophet model (Taylor & Letham, 2018) was selected for its interpretability, decomposition structure, and robustness to missing values — key features for teaching reproducible forecasting in R."
+    "section": "4.2 Distribution Analysis",
+    "text": "4.2 Distribution Analysis\nBoxplots provide a powerful visual tool to discuss dispersion, central tendency, and outliers across pollutants.\nIn this context, students learn how descriptive statistics translate into environmental interpretation, reinforcing quantitative reasoning with real data.\n\n\n\n\n\nFig. 8. Boxplots of NO₂ and O₃ concentrations across 2020–2024."
   },
   {
     "objectID": "notebook.knit.html#model-for-no₂",
     "href": "notebook.knit.html#model-for-no₂",
     "title": "Educational Notebook",
-    "section": "3.3 Model for NO₂",
-    "text": "3.3 Model for NO₂\nStudents can visualise how additive components — trend, seasonality, and residuals — reveal the influence of human activity and meteorological cycles on pollutant evolution. This exercise supports reproducible experimentation with forecasting horizons, cross-validation, and performance metrics such as RMSE or MAE.\n\n\n\n\n\nFig. 5a. Prophet forecast for NO₂ concentrations (2020–2024).\n\n\n\n\n\n\n\n\n\nFig. 5b. Prophet forecast for O₃ concentrations (2020–2024)."
+    "section": "5.1 Model for NO₂",
+    "text": "5.1 Model for NO₂\nStudents can visualise how additive components — trend, seasonality, and residuals — reveal the influence of human activity and meteorological cycles on pollutant evolution. This exercise supports reproducible experimentation with forecasting horizons, cross-validation, and performance metrics such as RMSE or MAE.\n\n\n\n\n\nFig. 5a. Prophet forecast for NO₂ concentrations (2020–2024).\n\n\n\n\n\n\n\n\n\nFig. 5b. Prophet forecast for O₃ concentrations (2020–2024)."
   },
   {
     "objectID": "notebook.knit.html#integration-workflow",
     "href": "notebook.knit.html#integration-workflow",
     "title": "Educational Notebook",
-    "section": "4.1 Integration Workflow",
-    "text": "4.1 Integration Workflow\n\n\n\n\n\nFig. 7. Integration workflow of meteorological and air quality data (2020–2024)."
+    "section": "6.1 Integration Workflow",
+    "text": "6.1 Integration Workflow\n\n\n\n\n\nFig. 7. Integration workflow of meteorological and air quality data (2020–2024)."
   },
   {
     "objectID": "notebook.knit.html#correlation-analysis-between-pollutants-and-meteorological-variables",
     "href": "notebook.knit.html#correlation-analysis-between-pollutants-and-meteorological-variables",
     "title": "Educational Notebook",
-    "section": "4.2 Correlation Analysis between Pollutants and Meteorological Variables",
-    "text": "4.2 Correlation Analysis between Pollutants and Meteorological Variables\nTo complement the integration workflow, this section computes the Spearman correlations between daily concentrations of NO₂ and O₃ and six meteorological parameters (temperature, relative humidity, wind speed, solar radiation, atmospheric pressure, and precipitation) using the validated datasets (2020–2024)."
+    "section": "6.2 Correlation Analysis between Pollutants and Meteorological Variables",
+    "text": "6.2 Correlation Analysis between Pollutants and Meteorological Variables\nTo complement the integration workflow, this section computes the Spearman correlations between daily concentrations of NO₂ and O₃ and six meteorological parameters (temperature, relative humidity, wind speed, solar radiation, atmospheric pressure, and precipitation) using the validated datasets (2020–2024).\n\n\nCode\nlibrary(arrow)\nlibrary(dplyr)\nlibrary(tidyr)\nlibrary(corrr)\nlibrary(knitr)\nlibrary(purrr)\nlibrary(lubridate)\n\n# --- 1. Cargar y combinar archivos anuales ---\nair_files &lt;- list.files(\n  \"data/Calidad del Aire_Parquet\",\n  pattern = \"aire_validados_.*\\\\.parquet$\",\n  full.names = TRUE\n)\n\nmet_files &lt;- list.files(\n  \"data/Meteorologia_Parquet\",\n  pattern = \"meteo_validados_.*\\\\.parquet$\",\n  full.names = TRUE\n)\n\nair &lt;- map_dfr(air_files, read_parquet)\nmet &lt;- map_dfr(met_files, read_parquet)\n\n# --- 2. Crear variable diaria ---\nair &lt;- air %&gt;%\n  mutate(date = as.Date(FECHA_HORA))\n\nmet &lt;- met %&gt;%\n  mutate(date = as.Date(FECHA_HORA))\n\n# --- 3. Agregar diariamente y pivotar a formato ancho ---\nair_wide &lt;- air %&gt;%\n  mutate(MAGNITUD = as.character(MAGNITUD)) %&gt;%\n  group_by(date, MAGNITUD) %&gt;%\n  summarise(valor = mean(VALOR, na.rm = TRUE), .groups = \"drop\") %&gt;%\n  pivot_wider(names_from = MAGNITUD, values_from = valor)\n\nmet_wide &lt;- met %&gt;%\n  mutate(MAGNITUD = as.character(MAGNITUD)) %&gt;%\n  group_by(date, MAGNITUD) %&gt;%\n  summarise(valor = mean(VALOR, na.rm = TRUE), .groups = \"drop\") %&gt;%\n  pivot_wider(names_from = MAGNITUD, values_from = valor)\n\n# --- 4. Unir por fecha ---\ndata_joined &lt;- inner_join(air_wide, met_wide, by = \"date\")\n\n# --- 5. Renombrar magnitudes (solo las que existen) ---\ndata_joined &lt;- data_joined %&gt;%\n  rename_with(\n    ~ recode(\n      .x,\n      `8`  = \"NO2\",\n      `14` = \"O3\",\n      `81` = \"WS\",\n      `83` = \"T\",\n      `85` = \"PRES\",\n      `86` = \"RH\",\n      `87` = \"SR\",\n      `89` = \"PREC\"\n    ),\n    .cols = intersect(\n      names(data_joined),\n      c(\"8\", \"14\", \"81\", \"83\", \"85\", \"86\", \"87\", \"89\")\n    )\n  )\n\n# --- 6. Calcular correlaciones de Spearman (robusto) ---\nvars &lt;- c(\"NO2\", \"O3\", \"T\", \"RH\", \"WS\", \"SR\", \"PRES\", \"PREC\")\n\ncor_matrix &lt;- data_joined %&gt;%\n  select(any_of(vars)) %&gt;%\n  correlate(method = \"spearman\") %&gt;%\n  focus(any_of(c(\"NO2\", \"O3\"))) %&gt;%\n  arrange(term)\n\n# --- 7. Mostrar tabla formateada ---\nkable(\n  cor_matrix %&gt;%\n    mutate(across(where(is.numeric), ~ round(.x, 2))),\n  caption = \"Table 4. Spearman correlation coefficients (ρ) between daily pollutant concentrations and meteorological variables (2020–2024).\",\n  col.names = c(\"Variable\", \"NO₂\", \"O₃\")\n)\n\n\n\nTable 4. Spearman correlation coefficients (ρ) between daily pollutant concentrations and meteorological variables (2020–2024).\n\n\nVariable\nNO₂\nO₃\n\n\n\n\nPREC\n-0.18\n-0.11\n\n\nRH\n0.24\n-0.70\n\n\nSR\n0.55\n-0.46\n\n\nT\n-0.35\n0.68\n\n\nWS\n-0.75\n0.57"
   },
   {
     "objectID": "notebook.knit.html#correlation-analysis-between-pollutants-and-meteorological-variables-1",

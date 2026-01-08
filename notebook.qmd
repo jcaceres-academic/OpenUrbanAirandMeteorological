@@ -1,6 +1,6 @@
 ---
 title: "Educational Notebook"
-subtitle: "Citizen Science and STEM Education with R — AI–IoT Forecasting and Reproducible Learning from Open Urban Air Quality Data"
+subtitle: "Citizen Science and STEM Education with R: Forecasting and Reproducible Learning from Open Urban Air Quality Data"
 author:
   - name: "Jesús Cáceres Tello"
     affiliation: "Universidad Complutense de Madrid"
@@ -19,7 +19,28 @@ format:
     number-sections: true
     code-fold: true
     theme: cosmo
+
 ---
+
+```{=html}
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">
+  <img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License CC BY 4.0">
+</a>
+<a href="https://www.r-project.org/" target="_blank" rel="noopener">
+  <img src="https://img.shields.io/badge/Made%20with-R-blue.svg" alt="Made with R">
+</a>
+<a href="https://quarto.org/" target="_blank" rel="noopener">
+  <img src="https://img.shields.io/badge/Rendered_with-Quarto-4A90E2.svg" alt="Rendered with Quarto">
+</a>
+<a href="https://doi.org/10.3390/app152212183" target="_blank" rel="noopener">
+  <img src="https://img.shields.io/badge/DOI-10.3390%2Fapp152212183-blue.svg" alt="DOI 10.3390/app152212183">
+</a>
+<a href="https://www.zotero.org/groups/6375403/appliedsciences-2025" target="_blank" rel="noopener">
+  <img src="https://img.shields.io/badge/Zotero-Applied%20Sciences--2025-red.svg" alt="Zotero Applied Sciences 2025">
+</a>
+
+```
+
 
 # 🌍 Introduction
 
